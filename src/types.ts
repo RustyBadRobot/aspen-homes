@@ -17,13 +17,11 @@ export interface FeaturedProject {
   slug: string;
   title: string;
   category: string;
-  location: string;
   image: string;
-  summary: string;
+  summary?: string;
   description: string[];
-  bedrooms?: number;
-  bathrooms?: number;
-  status: 'Current' | 'Completed' | 'Future';
+  gallery?: string[];
+  status?: 'Current' | 'Completed' | 'Future' | string;
 }
 
 export interface TeamMember {

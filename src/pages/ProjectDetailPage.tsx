@@ -1,4 +1,6 @@
-import { FEATURED_PROJECTS } from '../data/mockData';
+import { useEffect, useRef } from 'react';
+import Splide from '@splidejs/splide';
+import { FEATURED_PROJECTS, CURRENT_DEVELOPMENTS, PORTFOLIO_PROJECTS } from '../data/mockData';
 
 interface ProjectDetailPageProps {
   slug: string;
@@ -6,14 +8,44 @@ interface ProjectDetailPageProps {
 }
 
 export function ProjectDetailPage({ slug, navigate }: ProjectDetailPageProps) {
-  const currentIndex = FEATURED_PROJECTS.findIndex((p) => p.slug === slug);
-  const project = currentIndex >= 0 ? FEATURED_PROJECTS[currentIndex] : FEATURED_PROJECTS[0];
+  const allProjects = [...CURRENT_DEVELOPMENTS, ...PORTFOLIO_PROJECTS, ...FEATURED_PROJECTS];
+  const currentIndex = allProjects.findIndex((p) => p.slug === slug);
+  const project = currentIndex >= 0 ? allProjects[currentIndex] : allProjects[0];
 
-  const prevIndex = (currentIndex - 1 + FEATURED_PROJECTS.length) % FEATURED_PROJECTS.length;
-  const nextIndex = (currentIndex + 1) % FEATURED_PROJECTS.length;
+  const prevIndex = (currentIndex - 1 + allProjects.length) % allProjects.length;
+  const nextIndex = (currentIndex + 1) % allProjects.length;
 
-  const prevProject = FEATURED_PROJECTS[prevIndex];
-  const nextProject = FEATURED_PROJECTS[nextIndex];
+  const prevProject = allProjects[prevIndex];
+  const nextProject = allProjects[nextIndex];
+
+  const splideRef = useRef<HTMLDivElement>(null);
+  const splideInstance = useRef<Splide | null>(null);
+
+  useEffect(() => {
+    if (splideRef.current && project.gallery && project.gallery.length > 0) {
+      if (splideInstance.current) {
+        splideInstance.current.destroy();
+      }
+      splideInstance.current = new Splide(splideRef.current, {
+        type: 'slide',
+        rewind: true,
+        autoplay: true,
+        interval: 4500,
+        pauseOnHover: true,
+        arrows: true,
+        pagination: true,
+        speed: 700,
+      });
+      splideInstance.current.mount();
+    }
+
+    return () => {
+      if (splideInstance.current) {
+        splideInstance.current.destroy();
+        splideInstance.current = null;
+      }
+    };
+  }, [slug, project.gallery]);
 
   const scrollToContent = () => {
     const el = document.getElementById('project-text-content');
@@ -53,26 +85,46 @@ export function ProjectDetailPage({ slug, navigate }: ProjectDetailPageProps) {
           className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-20 space-y-6 text-neutral-700 font-light text-sm sm:text-[15px] leading-relaxed"
         >
           {project.description.map((paragraph, idx) => (
-            <p key={idx}>{paragraph}</p>
+            <p
+              key={idx}
+              className="[&_a]:text-neutral-900 [&_a]:underline [&_a]:hover:text-black font-light leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: paragraph }}
+            />
           ))}
 
-          {/* Photo Gallery for Project */}
-          <div className="pt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="w-full aspect-[3/2] overflow-hidden shadow-sm bg-neutral-100">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover aspect-[3/2] hover:scale-105 transition-transform duration-700"
-              />
+          {/* Carousel Gallery for Project */}
+          {project.gallery && project.gallery.length > 0 ? (
+            <div className="pt-8 sm:pt-12">
+              <div ref={splideRef} className="splide w-full aspect-[3/2] max-h-[75vh] min-h-[300px] bg-black overflow-hidden shadow-md">
+                <div className="splide__track h-full">
+                  <ul className="splide__list h-full">
+                    {project.gallery.map((imgSrc, idx) => (
+                      <li key={idx} className="splide__slide h-full">
+                        <div className="w-full h-full aspect-[3/2] relative bg-neutral-900">
+                          <img
+                            src={imgSrc}
+                            alt={`${project.title} - view ${idx + 1}`}
+                            className="w-full h-full object-cover aspect-[3/2]"
+                          />
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="w-full aspect-[3/2] overflow-hidden shadow-sm bg-neutral-100">
-              <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
-                alt="Interior specification"
-                className="w-full h-full object-cover aspect-[3/2] hover:scale-105 transition-transform duration-700"
-              />
+          ) : (
+            /* Photo Section when no dedicated gallery is provided */
+            <div className="pt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="w-full aspect-[3/2] overflow-hidden shadow-sm bg-neutral-100">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover aspect-[3/2] hover:scale-105 transition-transform duration-700"
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
 

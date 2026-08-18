@@ -97,18 +97,42 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
   }
 ];
 
-export const FEATURED_PROJECTS: FeaturedProject[] = [
+export const CURRENT_DEVELOPMENTS: FeaturedProject[] = [
+  {
+    id: 'horseshoe-lane-west-guildford',
+    slug: 'horseshoe-lane-west-guildford',
+    title: 'Horseshoe Crescent, Guildford',
+    category: 'Current Developments',
+    image: '/images/2026/04/P1-Front.jpeg',
+    description: [
+      'Our development at Horseshoe Crescent is an exclusive collection of three thoughtfully designed and meticulously<br>finished bespoke family homes. Each home showcases our signature blend of contemporary elegance, traditional<br>craftsmanship, and practical living.',
+      'Set within a peaceful and well‑connected corner of Guildford, these brand‑new properties offer generous layouts, high‑quality specifications, and an attention to detail that elevates everyday living. All three homes offer versatility, privacy and an excellent balance of formal and informal space.',
+      'PRICES FROM: £1,750,000',
+      'For more details, you can view the dedicated Horseshoe Crescent website <a href="https://www.horseshoecrescent.com/">here</a>',
+    ],
+    gallery: [
+      '/images/2026/04/P1-Front.jpeg',
+      '/images/2026/04/P1-Hallway.jpeg',
+      '/images/2026/04/P1-Open.jpeg',
+      '/images/2026/04/P1-Kitchen.jpeg',
+      '/images/2026/04/P1-Living.jpeg',
+      '/images/2026/04/P1-Study.jpeg',
+      '/images/2026/04/P1-Bed.jpeg',
+      '/images/2026/04/P1-Bath.jpeg',
+    ],
+    status: 'Completed',
+  },
+];
+
+export const PORTFOLIO_PROJECTS: FeaturedProject[] = [
   {
     id: 'merrow-croft',
     slug: 'merrow-croft-guildford',
     title: 'Merrow Croft, Guildford',
     category: 'Completed Developments',
-    location: 'Merrow, Guildford, Surrey',
     image: '/images/2019/05/18-Merrow-Croft-Guildford-GU1-2XH-153-1-800x533.jpg',
     summary: 'A development of two 5-bedroom luxury homes on the outskirts of Guildford in the leafy suburb of Merrow.',
     description: [],
-    bedrooms: 5,
-    bathrooms: 4,
     status: 'Completed',
   },
   {
@@ -116,47 +140,90 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     slug: 'foreman-manor-ash',
     title: 'Foreman Manor, Ash',
     category: 'Completed Developments',
-    location: 'Guildford, Surrey',
     image: '/images/2017/11/Photo_1dp_dp_28541807-800x533.jpg',
     summary: 'An outstanding bespoke residence situated in a prestigious Surrey location with extensive private grounds.',
     description: [
       'Tretower House is an exquisite contemporary family home situated in an established, quiet residential enclave of Guildford. Designed and built to exacting specifications, this property represents the very pinnacle of luxury Surrey living.',
       'Featuring expansive open-plan entertaining areas, handcrafted bespoke cabinetry, zoned underfloor heating, integrated smart home technology, and landscaped private rear gardens backing onto mature woodland.',
     ],
-    bedrooms: 5,
-    bathrooms: 5,
-    status: 'Current',
+    status: 'Completed',
   },
   {
     id: 'pewley-heights-guildford',
     slug: 'pewley-heights-guildford',
     title: 'Pewley Heights, Guildford',
     category: 'Completed Developments',
-    location: 'Merrow, Guildford, Surrey',
     image: '/images/2017/08/Pewley-Heights-Front-800x533.jpg',
     summary: 'A boutique development of 3 new handcrafted family homes in one of Guildford’s most sought-after roads.',
     description: [
       'Located at 25 & 25a Horseshoe Lane West, this select new development of 3 high-specification homes provides superior design and unmatched build quality.',
       'Our team is working diligently on groundwork, road completion, and structural framing to deliver another landmark development that complements the surrounding streetscape.',
     ],
-    bedrooms: 4,
-    bathrooms: 3,
-    status: 'Current',
+    status: 'Completed',
   },
   {
     id: 'butterfly-house-guildford',
     slug: 'butterfly-house-guildford',
     title: 'Butterfly House, Guildford',
     category: 'Completed Developments',
-    location: 'Guildford, Surrey',
     image: '/images/2017/08/Butterfly-House-Front-800x533.jpg',
     summary: 'Winner of Surrey Property Awards Best New Homes Development & Premier Guarantee Top Development.',
     description: [
       '50 Pewley Hill features two beautifully handcrafted six-bedroom luxury family residences overlooking the historic Surrey Hills.',
       'Awarded the Surrey Property Awards "Best New Homes Development" in 2014 and the Premier Guarantee Excellence Award for "Top Development".',
     ],
-    bedrooms: 6,
-    bathrooms: 5,
+    status: 'Completed',
+  },
+];
+
+export const FEATURED_PROJECTS: FeaturedProject[] = [
+  {
+    id: 'merrow-croft',
+    slug: 'merrow-croft-guildford',
+    title: 'Merrow Croft, Guildford',
+    category: 'Completed Developments',
+    image: '/images/2019/05/18-Merrow-Croft-Guildford-GU1-2XH-153-1-800x533.jpg',
+    summary: 'A development of two 5-bedroom luxury homes on the outskirts of Guildford in the leafy suburb of Merrow.',
+    description: [],
+    status: 'Completed',
+  },
+  {
+    id: 'foreman-manor-ash',
+    slug: 'foreman-manor-ash',
+    title: 'Foreman Manor, Ash',
+    category: 'Completed Developments',
+    image: '/images/2017/11/Photo_1dp_dp_28541807-800x533.jpg',
+    summary: 'An outstanding bespoke residence situated in a prestigious Surrey location with extensive private grounds.',
+    description: [
+      'Tretower House is an exquisite contemporary family home situated in an established, quiet residential enclave of Guildford. Designed and built to exacting specifications, this property represents the very pinnacle of luxury Surrey living.',
+      'Featuring expansive open-plan entertaining areas, handcrafted bespoke cabinetry, zoned underfloor heating, integrated smart home technology, and landscaped private rear gardens backing onto mature woodland.',
+    ],
+    status: 'Completed',
+  },
+  {
+    id: 'pewley-heights-guildford',
+    slug: 'pewley-heights-guildford',
+    title: 'Pewley Heights, Guildford',
+    category: 'Completed Developments',
+    image: '/images/2017/08/Pewley-Heights-Front-800x533.jpg',
+    summary: 'A boutique development of 3 new handcrafted family homes in one of Guildford’s most sought-after roads.',
+    description: [
+      'Located at 25 & 25a Horseshoe Lane West, this select new development of 3 high-specification homes provides superior design and unmatched build quality.',
+      'Our team is working diligently on groundwork, road completion, and structural framing to deliver another landmark development that complements the surrounding streetscape.',
+    ],
+    status: 'Completed',
+  },
+  {
+    id: 'butterfly-house-guildford',
+    slug: 'butterfly-house-guildford',
+    title: 'Butterfly House, Guildford',
+    category: 'Completed Developments',
+    image: '/images/2017/08/Butterfly-House-Front-800x533.jpg',
+    summary: 'Winner of Surrey Property Awards Best New Homes Development & Premier Guarantee Top Development.',
+    description: [
+      '50 Pewley Hill features two beautifully handcrafted six-bedroom luxury family residences overlooking the historic Surrey Hills.',
+      'Awarded the Surrey Property Awards "Best New Homes Development" in 2014 and the Premier Guarantee Excellence Award for "Top Development".',
+    ],
     status: 'Completed',
   },
 ];

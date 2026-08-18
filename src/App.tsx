@@ -16,9 +16,10 @@ import { SustainabilityPage } from './pages/SustainabilityPage';
 import { CustomerServicePage } from './pages/CustomerServicePage';
 import { LocalCommunityPage } from './pages/LocalCommunityPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
-import { FEATURED_PROJECTS } from './data/mockData';
+import { FEATURED_PROJECTS, CURRENT_DEVELOPMENTS, PORTFOLIO_PROJECTS } from './data/mockData';
 
 export default function App() {
+  const ALL_PROJECTS = [...CURRENT_DEVELOPMENTS, ...PORTFOLIO_PROJECTS, ...FEATURED_PROJECTS];
   // Ensure path ends with trailing slash (except empty string which normalizes to '/')
   const normalizePath = (p: string): string => {
     let path = p;
@@ -64,7 +65,7 @@ export default function App() {
   }, []);
 
   // Check if current route is a project slug
-  const matchedProject = FEATURED_PROJECTS.find(
+  const matchedProject = ALL_PROJECTS.find(
     (p) => normalizePath(p.slug) === currentPath || currentPath === `/${p.slug}/`
   );
 
@@ -83,10 +84,10 @@ export default function App() {
         return <AboutUsPage />;
 
       case '/portfolio/':
-        return <PortfolioPage navigate={navigate} title="Portfolio" />;
+        return <PortfolioPage navigate={navigate} title="Portfolio" items={PORTFOLIO_PROJECTS} />;
 
       case '/current-developments/':
-        return <PortfolioPage navigate={navigate} title="Current Developments" />;
+        return <PortfolioPage navigate={navigate} title="Current Developments" items={CURRENT_DEVELOPMENTS} />;
 
       case '/awards/':
         return <AwardsPage />;

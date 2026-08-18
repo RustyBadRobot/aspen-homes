@@ -1,16 +1,32 @@
-import { FEATURED_PROJECTS } from '../data/mockData';
+import { PORTFOLIO_PROJECTS, CURRENT_DEVELOPMENTS } from '../data/mockData';
+import { FeaturedProject } from '../types';
 
 interface PortfolioPageProps {
   navigate: (path: string) => void;
   title?: string;
+  items?: FeaturedProject[];
 }
 
-export function PortfolioPage({ navigate, title = 'Current Developments' }: PortfolioPageProps) {
+export function PortfolioPage({
+  navigate,
+  title = 'Portfolio',
+  items,
+}: PortfolioPageProps) {
+  const displayItems = items || (title === 'Current Developments' ? CURRENT_DEVELOPMENTS : PORTFOLIO_PROJECTS);
+
   const scrollToContent = () => {
     const el = document.getElementById('portfolio-grid-section');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const getCleanSummary = (proj: FeaturedProject) => {
+    if (proj.summary) return proj.summary;
+    if (proj.description && proj.description.length > 0) {
+      return proj.description[0].replace(/<[^>]*>/g, ' ');
+    }
+    return '';
   };
 
   return (
@@ -19,7 +35,7 @@ export function PortfolioPage({ navigate, title = 'Current Developments' }: Port
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
           src="/images/2017/09/Greensleeves-Views_sm.jpg"
-          alt="Current Developments"
+          alt={title}
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
         <div className="absolute inset-0 bg-black/35" />
@@ -43,8 +59,8 @@ export function PortfolioPage({ navigate, title = 'Current Developments' }: Port
 
       {/* Grid of Developments with hover effect */}
       <div id="portfolio-grid-section" className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          {FEATURED_PROJECTS.map((proj) => (
+        <div className={`grid grid-cols-1 ${displayItems.length > 1 ? 'md:grid-cols-2' : 'max-w-4xl mx-auto'}`}>
+          {displayItems.map((proj) => (
             <div
               key={proj.id}
               onClick={() => navigate(`/${proj.slug}/`)}
@@ -67,8 +83,8 @@ export function PortfolioPage({ navigate, title = 'Current Developments' }: Port
                   <div className="text-xs font-light text-neutral-300 tracking-widest uppercase mb-4">
                     {proj.category}
                   </div>
-                  <p className="text-xs sm:text-sm text-neutral-200 font-light leading-relaxed mb-6">
-                    {proj.summary}
+                  <p className="text-xs sm:text-sm text-neutral-200 font-light leading-relaxed mb-6 line-clamp-3">
+                    {getCleanSummary(proj)}
                   </p>
                   <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-white border-b border-white pb-1 group-hover:border-neutral-300">
                     <span>Explore Development</span>
