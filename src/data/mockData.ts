@@ -28,6 +28,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
   { name: 'Testimonials', path: '/testimonials/' },
   { name: 'Land Required', path: '/land-required/' },
   { name: 'Local Community', path: '/local-community/' },
+  { name: 'News', path: '/news/' },
   { name: 'Contact Us', path: '/contact-us/' },
 ];
 
