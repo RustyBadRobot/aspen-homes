@@ -21,7 +21,6 @@ export function HomePage({ navigate }: HomePageProps) {
         arrows: true,
         pagination: true,
         speed: 1000,
-        lazyLoad: 'nearby',
       });
 
       splideInstance.current.mount();
@@ -52,12 +51,26 @@ export function HomePage({ navigate }: HomePageProps) {
                 <li key={slide.id} className="splide__slide h-full relative">
                   <div className="w-full h-full aspect-[3/2] relative">
                     <img
-                      data-splide-lazy={slide.image}
-                      src={idx === 0 ? slide.image : undefined}
-                      alt={slide.alt}
+                      src={slide.image}
+                      alt={slide.alt || slide.title}
                       loading={idx === 0 ? 'eager' : 'lazy'}
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src =
+                          'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80';
+                      }}
                       className="w-full h-full object-cover aspect-[3/2] transition-transform duration-1000 ease-out"
                     />
+
+                    {/* Subtitle Caption Overlay if not empty */}
+                    {slide.subtitle && slide.subtitle.trim() !== '' && (
+                      <div className="absolute inset-x-0 bottom-12 sm:bottom-16 flex justify-center px-4 sm:px-8 z-10 pointer-events-none">
+                        <div className="bg-black/65 backdrop-blur-xs text-white max-w-3xl px-5 py-3 sm:px-8 sm:py-4 text-center rounded-xs border border-white/10 shadow-lg pointer-events-auto">
+                          <p className="text-xs sm:text-sm md:text-base font-light italic text-neutral-100 leading-relaxed font-['Cormorant_Garamond',serif]">
+                            {slide.subtitle}
+                          </p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </li>
               ))}
