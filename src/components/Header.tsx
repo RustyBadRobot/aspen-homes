@@ -57,9 +57,9 @@ export function Header({ currentPath, navigate }: HeaderProps) {
             : 'bg-black/90'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 flex items-center justify-between">
+        <div className="relative max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 flex items-center justify-between min-h-[56px] sm:min-h-[64px] md:min-h-[85px]">
           {/* Left Social Icons - Minimal footprint on mobile */}
-          <div className="flex items-center space-x-1 sm:space-x-2.5 md:space-x-3 shrink-0">
+          <div className="flex items-center space-x-1 sm:space-x-2.5 md:space-x-3 shrink-0 z-10">
             <a
               href={SOCIAL_LINKS.facebook}
               target="_blank"
@@ -91,13 +91,13 @@ export function Header({ currentPath, navigate }: HeaderProps) {
             </a>
           </div>
 
-          {/* Center Logo */}
-          <div className="flex-1 flex justify-center px-1 sm:px-2 min-w-0">
+          {/* Center Logo - Mathematically centered to the website */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-auto z-10">
             <AspenLogo onClick={() => handleNavClick('/')} />
           </div>
 
           {/* Right Action Icons (Menu Toggle) */}
-          <div className="flex items-center justify-end shrink-0">
+          <div className="flex items-center justify-end shrink-0 z-10">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
