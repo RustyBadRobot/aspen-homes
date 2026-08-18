@@ -40,6 +40,13 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
     title: 'Butterfly House',
     subtitle: '“We are enjoying making Butterfly House our home, the spacious design and the high quality of workmanship throughout are a pleasure”'
   },
+  {
+    id: 'slide-2',
+    image: '/images/2017/08/Butterfly-House-Hallway.jpg',
+    alt: 'Hallway of Butterfly House',
+    title: 'Butterfly House',
+    subtitle: ''
+  },
 ];
 
 export const CURRENT_DEVELOPMENTS: FeaturedProject[] = [
