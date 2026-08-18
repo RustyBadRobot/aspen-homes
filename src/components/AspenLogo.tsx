@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 export function AspenLeafIcon({ className = "w-9 h-9" }: { className?: string }) {
   return (
     <svg
@@ -94,8 +92,6 @@ export function AspenLogo({
   className = '',
   imageSrc = '/images/2017/08/Aspen_Homes_Logo_white-grey.png',
 }: AspenLogoProps) {
-  const [imageError, setImageError] = useState(false);
-
   return (
     <button
       onClick={onClick}
@@ -103,31 +99,12 @@ export function AspenLogo({
       className={`flex flex-col items-center justify-center text-center cursor-pointer group focus:outline-none ${className}`}
       aria-label="Aspen Homes Home"
     >
-      {!imageError ? (
-        <img
-          src={imageSrc}
-          alt="Aspen Homes"
-          className="h-10 sm:h-12 md:h-22 w-auto object-contain max-w-[220px] sm:max-w-[280px] transition-opacity duration-300"
-          referrerPolicy="no-referrer"
-          onError={() => setImageError(true)}
-        />
-      ) : (
-        /* Fallback typographic emblem if image has not yet been uploaded */
-        <div className="flex flex-col items-center justify-center">
-          <div className="flex items-center space-x-2 sm:space-x-3.5">
-            <span className="text-white text-xl sm:text-2xl md:text-3xl tracking-[0.25em] sm:tracking-[0.3em] font-light font-['Cormorant_Garamond',serif] uppercase">
-              Aspen
-            </span>
-            <AspenLeafIcon className="w-8 h-8 sm:w-10 sm:h-10 text-neutral-200 transition-transform duration-500 group-hover:rotate-6" />
-            <span className="text-white text-xl sm:text-2xl md:text-3xl tracking-[0.25em] sm:tracking-[0.3em] font-light font-['Cormorant_Garamond',serif] uppercase">
-              Homes
-            </span>
-          </div>
-          <div className="text-[9px] sm:text-[10px] tracking-[0.28em] sm:tracking-[0.35em] text-neutral-300 font-light font-['Montserrat',sans-serif] uppercase mt-0.5 sm:mt-1">
-            Inspirational Design – Aspirational Living
-          </div>
-        </div>
-      )}
+      <img
+        src={imageSrc}
+        alt="Aspen Homes"
+        className="h-10 sm:h-12 md:h-22 w-auto object-contain max-w-[220px] sm:max-w-[280px] transition-opacity duration-300"
+        referrerPolicy="no-referrer"
+      />
     </button>
   );
 }

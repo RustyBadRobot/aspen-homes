@@ -56,14 +56,6 @@ export function HomePage({ navigate }: HomePageProps) {
                       src={idx === 0 ? slide.image : undefined}
                       alt={slide.alt}
                       loading={idx === 0 ? 'eager' : 'lazy'}
-                      onError={(e) => {
-                        // Fallback to high-res architectural photograph if local asset is not yet placed
-                        const target = e.currentTarget;
-                        if (!target.dataset.fallbackApplied) {
-                          target.dataset.fallbackApplied = 'true';
-                          target.src = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85';
-                        }
-                      }}
                       className="w-full h-full object-cover aspect-[3/2] transition-transform duration-1000 ease-out"
                     />
                   </div>
@@ -118,17 +110,16 @@ export function HomePage({ navigate }: HomePageProps) {
                 />
 
                 {/* Hover Overlay with text appearing on hover */}
-                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex flex-col justify-end text-white">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-neutral-300 font-light mb-1">
-                    {proj.category}
-                  </span>
-                  <h3 className="text-base sm:text-lg font-light font-['Cormorant_Garamond',serif] uppercase tracking-wider text-white">
-                    {proj.title}
-                  </h3>
-                  <p className="text-xs text-neutral-300 mt-2 line-clamp-3 font-light leading-relaxed">
-                    {proj.summary}
-                  </p>
-                  <div className="mt-3 text-[11px] uppercase tracking-widest text-white/90 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
+                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-5 sm:p-6 flex flex-col justify-between text-white">
+                  <div>
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-neutral-300 font-light block mb-1">
+                      {proj.category}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-light font-['Cormorant_Garamond',serif] uppercase tracking-wider text-white leading-tight">
+                      {proj.title}
+                    </h3>
+                  </div>
+                  <div className="text-[11px] uppercase tracking-widest text-white/90 flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
                     <span>View Project</span>
                     <span>→</span>
                   </div>
