@@ -50,13 +50,24 @@ export function CustomerServicePage({ navigate }: CustomerServicePageProps) {
           <p>All of our homes are also constructed to the highest standard which is strictly monitored by a surveyor at <a href="https://www.premierguarantee.com/" target="_blank" rel="noopener noreferrer" className="underline text-neutral-900 hover:text-black">Premier Guarantee</a>, which provides a 10-year new home guarantee; please click on their logo below if you would like any further information.</p>
         </div>
 
-        <div className="pt-4">
-          <button
-            onClick={() => navigate('/contact-us/')}
-            className="bg-[#b3b8bc] hover:bg-neutral-800 text-white text-xs uppercase tracking-[0.25em] px-8 py-3 rounded-full transition-all duration-300 shadow-sm cursor-pointer"
+        <div className="pt-6 flex justify-center">
+          <a
+            href="https://www.premierguarantee.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block transition-transform hover:scale-105"
+            title="Visit Premier Guarantee"
           >
-            Contact Customer Care
-          </button>
+            <img
+              src="/images/2017/09/premier-guarantee_logo_large2.png"
+              alt="Premier Guarantee - 10 Year Warranty"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src =
+                  'https://www.premierguarantee.com/media/2513/premier-guarantee-logo.svg';
+              }}
+              className="max-h-20 sm:max-h-24 w-auto object-contain mx-auto"
+            />
+          </a>
         </div>
       </div>
     </div>
