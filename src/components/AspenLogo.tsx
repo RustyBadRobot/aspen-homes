@@ -92,7 +92,7 @@ interface AspenLogoProps {
 export function AspenLogo({
   onClick,
   className = '',
-  imageSrc = '/images/Aspen_Homes_Logo_white-grey.png',
+  imageSrc = '/images/2017/08/Aspen_Homes_Logo_white-grey.png',
 }: AspenLogoProps) {
   const [imageError, setImageError] = useState(false);
 

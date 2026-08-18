@@ -35,8 +35,8 @@ export const NAVIGATION_ITEMS: NavItem[] = [
 export const HOME_SLIDER_ITEMS: SlideItem[] = [
   {
     id: 'slide-1',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85',
-    alt: 'Luxury dining room with roof lantern and bespoke open-plan living',
+    image: '/images/2017/08/Butterfly-House-Front_crop2.jpg',
+    alt: 'Butterfly House Front View - Aspen Homes Guildford',
     title: 'Inspirational Design',
     subtitle: 'Bespoke residential developments crafted with distinction across Surrey',
   },

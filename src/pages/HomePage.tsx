@@ -56,6 +56,14 @@ export function HomePage({ navigate }: HomePageProps) {
                       src={idx === 0 ? slide.image : undefined}
                       alt={slide.alt}
                       loading={idx === 0 ? 'eager' : 'lazy'}
+                      onError={(e) => {
+                        // Fallback to high-res architectural photograph if local asset is not yet placed
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallbackApplied) {
+                          target.dataset.fallbackApplied = 'true';
+                          target.src = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85';
+                        }
+                      }}
                       className="w-full h-full object-cover aspect-[3/2] transition-transform duration-1000 ease-out"
                     />
                   </div>
