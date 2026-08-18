@@ -895,69 +895,108 @@ export const NEWS_POSTS: NewsPost[] = [
 export const TESTIMONIALS_LIST: TestimonialItem[] = [
   {
     id: 'test-1',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
-    quote: 'The whole process of buying a home from Aspen has been extremely positive. We are delighted with the attention to detail and the quality of workmanship throughout, resulting in a very high standard home which in my opinion, is second to none.',
-    author: 'Mr and Mrs S Eaves',
-    location: 'Owners of 52 Pewley Hill, Guildford',
-    hasTextOverlayDefault: true,
+    image: '/images/2017/08/Butterfly-House-Front.jpg',
+    quote: 'From the moment we entered the property we were impressed by the quality of the house and the enthusiasm and passion of Joe Jelley. We are enjoying making Butterfly House our home, the spacious design and the high quality of workmanship throughout are a pleasure. Joe and his team have helped us settle in - no query, however small, has been too much trouble.',
+    author: 'Mrs C Tufts',
+    location: 'owner of Butterfly House, Guildford',
+    hasTextOverlayDefault: true
   },
   {
     id: 'test-2',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
-    quote: 'What has also been particularly pleasing is the after sales service we have received. Aspen has always gone out of its way to ensure even the inevitable small teething problems were dealt with efficiently and without fuss.',
-    author: 'Mr & Mrs Henderson',
-    location: 'Merrow Croft, Guildford',
+    image: '/images/2017/08/Butterfly-House-Rear-2_sm.jpg',
+    quote: 'Your development in Aldersey Road is everything you promised and disturbance during the building process was minimal. It is in keeping with the area, more than that it has enhanced the road visually, and looks classy. No wonder it sold so quickly!',
+    author: 'Mr R Ogden',
+    location: '2a Aldersey Road, neighbour of Butterfly House',
+    hasTextOverlayDefault: true
   },
   {
     id: 'test-3',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
-    quote: 'I have already recommended Aspen Homes to friends of ours who are now in the process of buying a new home from them — I know they will not be disappointed.',
-    author: 'David & Claire Thorne',
-    location: 'Pewley Hill, Guildford',
+    image: '/images/2017/08/Pewley-Heights-Front.jpg',
+    quote: 'Since moving into Pewley Heights almost a year ago the house has continued to surpass all our expectations, as has the Aspen Homes team, who are always on hand to address any issues we may have. After agreeing to purchase Pewley Heights off plan we were particularly pleased with the way Aspen Homes kept us regularly updated on how the house was progressing throughout the development process, and we were delighted with the opportunity to have a say in the design of certain aspects of our new home.',
+    author: 'Mr & Mrs T Bliss',
+    location: 'owners of Pewley Heights, Guildford',
+    hasTextOverlayDefault: true
   },
   {
     id: 'test-4',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80',
-    quote: 'Joe Jelley of Aspen Homes moved quickly and efficiently from point of offer on the site we introduced to his firm; his energy and attention to detail carried on throughout the transaction. The outcome was two stunning family homes nestled at the top of Farnham Park.',
-    author: 'Land & New Homes Director',
-    location: 'Estate Agency, Farnham',
-    hasTextOverlayDefault: true,
+    image: '/images/2017/09/Fairwood-Front_sm.jpg',
+    quote: 'We bought our house when the walls were one foot high. This meant that we were able to do limited customisation of the house with which Joe was very helpful. We were able to arrange lighting and audio-visual systems to meet our needs and we had a lot of help linking laptops, sound systems and televisions to the internet. We brought in our own landscape gardener and Joe and the team executed the plans to the highest standard. Teething troubles were fixed quickly and effectively. All our friends comment favourably on the design of the house and the quality of the materials.',
+    author: 'Mr and Mrs P Morgan',
+    location: 'owners of Fairwood, Haslemere',
+    hasTextOverlayDefault: true
   },
   {
     id: 'test-5',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80',
-    quote: 'From architectural concept to key handover, Aspen Homes demonstrated impeccable standards. The finish of the kitchen and vaulted entertaining space exceeded all expectations.',
-    author: 'Robert & Sarah King',
-    location: 'Merrow Downs, Surrey',
+    image: '/images/2017/08/Pewley-Hill-Front-1.jpg',
+    quote: 'The whole process of buying a home from Aspen has been extremely positive. We are delighted with the attention to detail and the quality of workmanship throughout, resulting in a very high standard home which in my opinion, is second to none. What has also been particularly pleasing is the after sales service we have received. Aspen has always gone out of its way to ensure even the inevitable small teething problems (and there have been very few) were dealt with efficiently and without fuss. I have already recommended Aspen Homes to friends of ours who are now in the process of buying a new home from them – I know they will not be disappointed.',
+    author: 'Mr and Mrs S Eaves',
+    location: 'owners of 52 Pewley Hill, Guildford',
+    hasTextOverlayDefault: true
   },
   {
     id: 'test-6',
-    image: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=800&q=80',
-    quote: 'A housebuilder with genuine integrity and respect for the local Surrey architectural vernacular. Our home feels solid, beautifully insulated, and exquisitely detailed.',
-    author: 'The Campbell Family',
-    location: 'Guildford, Surrey',
+    image: '/images/2017/09/Pewley-Hill-Kitchen_quote.jpg',
+    quote: 'This is the first time we have bought a new build house, so we were slightly nervous. However we are very satisfied with the quality and location of our new home. Our experience has been good, mainly as a result of Joe Jelley’s personal involvement throughout. In particular, he has proactively sorted out the inevitable bedding down problems, making sure everything is rectified quickly. It is quite obvious that Joe passionately cares about the quality of the homes he is developing and is very committed to making things go as smoothly as possible afterwards for the buyers.',
+    author: 'Mr and Mrs D Hall',
+    location: 'owners of 50 Pewley Hill, Guildford',
+    hasTextOverlayDefault: true
   },
   {
     id: 'test-7',
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80',
-    quote: 'The craftsmanship and interior finishes in our new home are simply breathtaking. We could not have asked for a smoother purchase experience.',
-    author: 'James & Helen Morrison',
-    location: 'Surrey',
+    image: '/images/2017/09/Pinehurst-Front_sm.jpg',
+    quote: 'From start to finish it was an absolute pleasure dealing with Joe and his team at Aspen Homes, the level of care they have for their customers is fantastic. Pinehurst is a home of extremely high quality and is a credit to the skill and professionalism of their builders. I would happily recommend a new build by Aspen Homes to anyone.',
+    author: 'Mr F Reed',
+    location: 'owner of Pinehurst, Haslemere',
+    hasTextOverlayDefault: true
   },
   {
     id: 'test-8',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80',
-    quote: 'Aspen Homes brings a level of bespoke refinement that is rare in today’s housebuilding industry. Every junction, lighting fixture, and oak joinery detail was crafted with care.',
-    author: 'Bespoke Interior Consultant',
-    location: 'Guildford',
+    image: '/images/2017/09/Chestnut-House-Gates_quote.jpg',
+    quote: 'We would highly recommend purchasing a property from Aspen Homes. They build beautiful homes of the highest quality and standard. Any issues are promptly resolved by an efficient and highly skilled team. It’s been an absolute delight and we look forward to purchasing our next home from Aspen Homes and maintaining a long term relationship with Joe Jelley and the team.',
+    author: 'Mr and Mrs R Preedy',
+    location: 'owners of The Pines, Camberley',
+    hasTextOverlayDefault: true
   },
   {
     id: 'test-9',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80',
-    quote: 'Living in an Aspen Home has been a dream for our family. The balance between open sociable areas and private quiet rooms is masterfully thought through.',
-    author: 'Marcus & Fiona Lloyd',
-    location: 'Merrow, Surrey',
+    image: '/images/2017/09/Lowlands-Front_quote.jpg',
+    quote: 'I just wanted to write and say that I found the experience of buying a house from your company extremely positive. From the start you have been very helpful in keeping me up to date with progress and were very amenable to changes where possible. I am very pleased with my new home. The attention to detail in both the layout and interior design is a real highlight. The after sale’s care to deal with the inevitable small problems that arise has also been extremely good. I would certainly recommend your company to any of my friends or family.',
+    author: 'Mrs A Morling',
+    location: 'owner of Little Acorns at Lowlands, Farnham',
+    hasTextOverlayDefault: true
   },
+  {
+    id: 'test-10',
+    image: '/images/2017/09/Lowlands-Bed_sm.jpg',
+    quote: 'The finished product is a highly presentable pair of houses that add to, rather than detract from, the road. With limited space it could have been a nightmare for the residents in Folly Lane but your planning appeared to be such that inconvenience was kept to an absolute minimum throughout. We had nothing but courtesy and help from your site manager and all others working the site and this made the experience a very acceptable one for us. Please thank all concerned on our behalf.',
+    author: 'Mr and Mrs P Bridgman',
+    location: 'neighbours of Lowlands, Farnham',
+    hasTextOverlayDefault: true
+  },
+  {
+    id: 'test-11',
+    image: '/images/2017/09/Lowlands-Basin_sm.jpg',
+    quote: 'Joe Jelley of Aspen Homes moved quickly and efficiently from point of offer on the site we introduced to his firm; his energy and attention to detail carried on throughout the transaction. The outcome was two stunning family homes nestled at the top of Farnham Park. I look forward to working on our next development already.',
+    author: 'James Fearn',
+    location: 'owner of Keats Fearn Estate Agency, Farnham',
+    hasTextOverlayDefault: true
+  },
+  {
+    id: 'test-12',
+    image: '/images/2017/09/The-Barns-1_quote.jpg',
+    quote: 'We were absolutely delighted with The Barns at Normandy. Aspen Homes had sympathetically rebuilt and refurbished the old barns to an exceptionally high standard, making them a beautiful home as well as retaining their existing character. I would have no issue with recommending their homes to any of our friends.',
+    author: 'Mrs J Wright',
+    location: 'owner of The Barns, Normandy',
+    hasTextOverlayDefault: true
+  },
+  {
+    id: 'test-13',
+    image: '/images/2020/11/Plot-1-FM.jpg',
+    quote: 'As soon as we entered the property at Foreman Manor we were taken back by the quality and craftsmanship of the house. Aspen Homes do not produce your typical new build house and this shows with the extra features included in the sale of the property. Joe and Roger have helped us settle in and any query big or small is dealt with in the most professional manner.\n\nWe are delighted with our new family home and can not wait to start making memories.',
+    author: 'Mr L Baker',
+    location: 'owner at Foreman Manor, Ash',
+    hasTextOverlayDefault: true
+  }
 ];
 
 export const VIDEOS_LIST: VideoItem[] = [

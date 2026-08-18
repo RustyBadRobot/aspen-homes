@@ -81,7 +81,7 @@ export function TestimonialsPage() {
                     &ldquo;
                   </div>
 
-                  <p className="text-sm sm:text-base md:text-[17px] font-normal text-neutral-100 leading-relaxed italic mb-6">
+                  <p className="text-sm sm:text-base font-normal text-neutral-100 leading-relaxed italic mb-6">
                     {item.quote}
                   </p>
 
