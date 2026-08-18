@@ -1,13 +1,8 @@
-import { useState } from 'react';
-import { EmailModal } from '../components/EmailModal';
-
 interface LandRequiredPageProps {
   navigate: (path: string) => void;
 }
 
 export function LandRequiredPage({ navigate }: LandRequiredPageProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const scrollToContent = () => {
     const el = document.getElementById('land-required-content');
     if (el) {
@@ -66,7 +61,7 @@ export function LandRequiredPage({ navigate }: LandRequiredPageProps) {
         {/* Action Button */}
         <div className="pt-6">
           <button
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => navigate('/contact-us/')}
             id="land-contact-btn"
             className="bg-[#b3b8bc] hover:bg-neutral-800 text-white text-xs uppercase tracking-[0.25em] px-8 py-3 rounded-full transition-all duration-300 shadow-sm cursor-pointer hover:shadow-md"
           >
@@ -74,14 +69,6 @@ export function LandRequiredPage({ navigate }: LandRequiredPageProps) {
           </button>
         </div>
       </div>
-
-      {/* Quick Land Enquiry Modal */}
-      <EmailModal
-        isOpen={isModalOpen}
-        recipientName="Joe Jelley (Land Acquisition)"
-        recipientEmail="info@aspen-homes.co.uk"
-        onClose={() => setIsModalOpen(false)}
-      />
     </div>
   );
 }
