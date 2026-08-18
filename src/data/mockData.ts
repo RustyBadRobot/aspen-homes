@@ -28,7 +28,6 @@ export const NAVIGATION_ITEMS: NavItem[] = [
   { name: 'Testimonials', path: '/testimonials/' },
   { name: 'Land Required', path: '/land-required/' },
   { name: 'Local Community', path: '/local-community/' },
-  { name: 'News', path: '/news/' },
   { name: 'Contact Us', path: '/contact-us/' },
 ];
 
@@ -36,66 +35,10 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
   {
     id: 'slide-1',
     image: '/images/2017/08/Butterfly-House-Front_crop2.jpg',
-    alt: 'Butterfly House Front View - Aspen Homes Guildford',
-    title: 'Inspirational Design',
-    subtitle: 'Bespoke residential developments crafted with distinction across Surrey',
+    alt: 'Front view of Butterfly House',
+    title: 'Butterfly House',
+    subtitle: '“We are enjoying making Butterfly House our home, the spacious design and the high quality of workmanship throughout are a pleasure”'
   },
-  {
-    id: 'slide-2',
-    image: '/images/2017/08/Butterfly-House-Dining_crop.jpg',
-    alt: 'Grand Surrey country residence with handcrafted brickwork and gated driveway',
-    title: 'Aspirational Living',
-    subtitle: 'Exceptional attention to detail, architectural poise, and modern luxury',
-  },
-  {
-    id: 'slide-3',
-    image: '/images/2017/08/Butterfly-House-Kitchen.jpg',
-    alt: 'Exquisite kitchen island with premium fittings and integrated appliances',
-    title: 'Precision Craftsmanship',
-    subtitle: 'Award-winning standards in prime Surrey residential locations',
-  },
-  {
-    id: 'slide-4',
-    image: '/images/2017/08/Butterfly-House-Master-Suite.jpg',
-    alt: 'Bespoke master suite with luxury appointments and serene atmosphere',
-    title: 'Timeless Elegance',
-    subtitle: 'Combining cutting-edge innovations with classic architectural heritage',
-  },
-  {
-    id: 'slide-5',
-    image: '/images/2017/08/Pewley-Hill-Master.jpg',
-    alt: 'Spacious living room with open-plan design and natural light',
-    title: 'Uncompromising Quality',
-    subtitle: 'Delivering homes that exceed expectations in every detail and finish',
-  },
-  {
-    id: 'slide-6',
-    image: '/images/2017/08/Pinehurst-Rear.jpg',
-    alt: 'Elegant exterior of a Surrey home with landscaped gardens and architectural finesse',
-    title: 'Bespoke Developments',
-    subtitle: 'Tailored to the unique needs and aspirations of our discerning clients',
-  },
-  {
-    id: 'slide-7',
-    image: '/images/2017/08/Pewley-Heights-Bed-2-1.jpg',
-    alt: 'Modern kitchen with premium appliances and sophisticated design',
-    title: 'Innovative Design',
-    subtitle: 'Blending contemporary aesthetics with functional living spaces',
-  },
-  {
-    id: 'slide-8',
-    image: '/images/2017/08/Pewley-Heights-Study.jpg',
-    alt: 'Cozy living room with warm lighting and comfortable seating',
-    title: 'Exceptional Comfort',
-    subtitle: 'Creating spaces that offer the perfect blend of style and functionality',
-  },
-  {
-    id: 'slide-9',
-    image: '/images/2017/08/Butterfly-House-Bed-3.jpg',
-    alt: 'Luxurious bathroom with spa-like features and elegant finishes',
-    title: 'Refined Interiors',
-    subtitle: 'Attention to detail in every room, ensuring a harmonious living experience',
-  }
 ];
 
 export const CURRENT_DEVELOPMENTS: FeaturedProject[] = [
