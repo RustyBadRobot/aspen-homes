@@ -40,14 +40,14 @@ export function CustomerServicePage({ navigate }: CustomerServicePageProps) {
 
       {/* Main Content */}
       <div id="customer-service-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center space-y-8">
-        <h2 className="text-lg sm:text-xl font-normal text-neutral-900 tracking-wide font-['Montserrat',sans-serif]">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-neutral-900 leading-relaxed font-['Montserrat',sans-serif]">
           At Aspen Homes we ensure our clients receive an exemplary service which starts from the day they reserve their home, and continues long after they’ve moved in.
         </h2>
 
-        <div className="space-y-6 text-xs sm:text-sm font-light text-neutral-600 leading-relaxed text-left sm:text-center max-w-3xl mx-auto">
+        <div className="space-y-6 text-base sm:text-[17px] font-normal text-neutral-700 leading-relaxed text-left sm:text-center max-w-3xl mx-auto">
           <p>Everything we do is to make their experience of home-buying as seamless and stress-free as possible.</p>
           <p>Shortly before your home is ready, we undertake a full inspection of your new home and identify any remaining issues so that the day you collect the keys, you are able to start enjoying your new home as soon as you step through the door. We will also demonstrate how your home ‘works’, as well as all the appliances and leave you with a comprehensive manual as a reminder. As a hands-on niche housebuilder, we’re able to continue to provide an after-sales service long after you’ve moved in to ensure you enjoy and settle in to your new home.</p>
-          <p>All of our homes are also constructed to the highest standard which is strictly monitored by a surveyor at <a href="https://www.premierguarantee.com/">Premier Guarantee</a>, which provides a 10-year new home guarantee; please click on their logo below if you would like any further information.</p>
+          <p>All of our homes are also constructed to the highest standard which is strictly monitored by a surveyor at <a href="https://www.premierguarantee.com/" target="_blank" rel="noopener noreferrer" className="underline text-neutral-900 hover:text-black">Premier Guarantee</a>, which provides a 10-year new home guarantee; please click on their logo below if you would like any further information.</p>
         </div>
 
         <div className="pt-4">

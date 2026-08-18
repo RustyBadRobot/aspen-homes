@@ -56,13 +56,13 @@ export function EmailModal({
         </button>
 
         <div className="text-center mb-6">
-          <div className="text-xs uppercase tracking-[0.25em] text-neutral-400 font-light mb-1">
+          <div className="text-xs uppercase tracking-[0.25em] text-neutral-400 font-normal mb-1">
             Aspen Homes Surrey
           </div>
-          <h3 className="text-xl sm:text-2xl font-light font-['Cormorant_Garamond',serif] uppercase text-white tracking-widest">
+          <h3 className="text-xl sm:text-2xl font-normal font-['Cormorant_Garamond',serif] uppercase text-white tracking-widest">
             {recipientName ? `Contact ${recipientName}` : 'Enquire With Aspen Homes'}
           </h3>
-          <p className="text-xs text-neutral-400 mt-1 font-light">
+          <p className="text-xs text-neutral-400 mt-1 font-normal">
             Directly contacting: <span className="text-neutral-200">{recipientEmail}</span>
           </p>
         </div>
@@ -74,13 +74,13 @@ export function EmailModal({
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <p className="text-base font-light text-white">Thank you for your message.</p>
-            <p className="text-xs text-neutral-400">Our team will be in touch with you shortly.</p>
+            <p className="text-base font-normal text-white">Thank you for your message.</p>
+            <p className="text-xs text-neutral-400 font-normal">Our team will be in touch with you shortly.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-4 text-sm font-light">
+          <form onSubmit={handleSubmit} className="space-y-4 text-sm font-normal">
             <div>
-              <label htmlFor="contact-form-name" className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+              <label htmlFor="contact-form-name" className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-normal">
                 Your Full Name *
               </label>
               <input
@@ -90,13 +90,13 @@ export function EmailModal({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. Eleanor Vance"
-                className="w-full bg-[#222222] border border-neutral-700 px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-[#222222] border border-neutral-700 px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors text-base"
               />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="contact-form-email" className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                <label htmlFor="contact-form-email" className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-normal">
                   Email Address *
                 </label>
                 <input
@@ -106,12 +106,12 @@ export function EmailModal({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="your.name@example.com"
-                  className="w-full bg-[#222222] border border-neutral-700 px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors"
+                  className="w-full bg-[#222222] border border-neutral-700 px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors text-base"
                 />
               </div>
 
               <div>
-                <label htmlFor="contact-form-phone" className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+                <label htmlFor="contact-form-phone" className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-normal">
                   Phone Number
                 </label>
                 <input
@@ -120,13 +120,13 @@ export function EmailModal({
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="07123 456789"
-                  className="w-full bg-[#222222] border border-neutral-700 px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors"
+                  className="w-full bg-[#222222] border border-neutral-700 px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors text-base"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="contact-form-message" className="block text-xs uppercase tracking-wider text-neutral-300 mb-1">
+              <label htmlFor="contact-form-message" className="block text-xs uppercase tracking-wider text-neutral-300 mb-1 font-normal">
                 Message / Enquiry Details *
               </label>
               <textarea
@@ -136,7 +136,7 @@ export function EmailModal({
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Please let us know how we can assist you..."
-                className="w-full bg-[#222222] border border-neutral-700 px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors resize-none"
+                className="w-full bg-[#222222] border border-neutral-700 px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors resize-none text-base font-normal"
               />
             </div>
 

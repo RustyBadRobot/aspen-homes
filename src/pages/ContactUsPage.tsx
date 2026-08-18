@@ -50,31 +50,31 @@ export function ContactUsPage() {
                 <div className="w-10 h-[1px] bg-neutral-300 mt-3" />
               </div>
 
-              <div className="flex items-start space-x-3 text-neutral-600 font-light">
+              <div className="flex items-start space-x-3 text-neutral-700 font-normal">
                 <MapPin className="w-4 h-4 text-neutral-500 mt-1 flex-shrink-0" />
-                <address className="not-italic text-sm leading-relaxed text-neutral-700">
-                  <p className="font-normal text-neutral-900">43 Meads Road</p>
+                <address className="not-italic text-base leading-relaxed text-neutral-800">
+                  <p className="font-medium text-neutral-900">43 Meads Road</p>
                   <p>Guildford</p>
                   <p>Surrey</p>
                   <p>GU1 2NA</p>
                 </address>
               </div>
 
-              <div className="space-y-3 pt-2 border-t border-neutral-200/80">
-                <div className="flex items-center space-x-3 text-sm font-light text-neutral-700">
+              <div className="space-y-4 pt-2 border-t border-neutral-200/80">
+                <div className="flex items-center space-x-3 text-base font-normal text-neutral-800">
                   <Phone className="w-4 h-4 text-neutral-500 flex-shrink-0" />
                   <div>
-                    <span className="text-[11px] uppercase tracking-wider text-neutral-400 block font-normal">Telephone</span>
+                    <span className="text-xs uppercase tracking-wider text-neutral-500 block font-normal">Telephone</span>
                     <a href="tel:01483614302" className="hover:text-black font-medium transition-colors">
                       01483 614302
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3 text-sm font-light text-neutral-700">
+                <div className="flex items-center space-x-3 text-base font-normal text-neutral-800">
                   <Mail className="w-4 h-4 text-neutral-500 flex-shrink-0" />
                   <div>
-                    <span className="text-[11px] uppercase tracking-wider text-neutral-400 block font-normal">Email</span>
+                    <span className="text-xs uppercase tracking-wider text-neutral-500 block font-normal">Email</span>
                     <a href="mailto:info@aspen-homes.co.uk" className="hover:text-black font-medium transition-colors">
                       info@aspen-homes.co.uk
                     </a>
@@ -86,7 +86,7 @@ export function ContactUsPage() {
             {/* Social Links & External Directions */}
             <div className="pt-6 border-t border-neutral-200/80 space-y-4">
               <div>
-                <div className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 font-light mb-3">
+                <div className="text-xs uppercase tracking-[0.2em] text-neutral-500 font-normal mb-3">
                   Connect With Us
                 </div>
                 <div className="flex items-center space-x-3">
@@ -115,7 +115,7 @@ export function ContactUsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Aspen Homes LinkedIn"
-                    className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-700 hover:text-black hover:border-black transition-all text-[11px] font-semibold hover:bg-white shadow-xs"
+                    className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-700 hover:text-black hover:border-black transition-all text-xs font-semibold hover:bg-white shadow-xs"
                   >
                     in
                   </a>

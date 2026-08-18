@@ -36,11 +36,11 @@ export function LocalCommunityPage() {
 
       {/* Main Content */}
       <div id="local-community-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center space-y-8">
-        <h2 className="text-lg sm:text-xl font-normal text-neutral-900 tracking-wide font-['Montserrat',sans-serif]">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-neutral-900 leading-relaxed font-['Montserrat',sans-serif]">
           Proudly Rooted in Surrey Heritage and Community Life
         </h2>
 
-        <div className="space-y-6 text-xs sm:text-sm font-light text-neutral-600 leading-relaxed text-left sm:text-center max-w-3xl mx-auto">
+        <div className="space-y-6 text-base sm:text-[17px] font-normal text-neutral-700 leading-relaxed text-left sm:text-center max-w-3xl mx-auto">
           <p>
             As a local Guildford-based housebuilder, we believe that development must serve the long-term benefit of the wider community. We work actively with parish councils, local residents, schools, and environmental groups across Guildford, Merrow, Farnham, and surrounding Surrey villages.
           </p>

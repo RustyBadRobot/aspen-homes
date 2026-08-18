@@ -81,15 +81,15 @@ export function TestimonialsPage() {
                     &ldquo;
                   </div>
 
-                  <p className="text-xs sm:text-sm font-light text-neutral-200 leading-relaxed italic mb-6">
+                  <p className="text-sm sm:text-base md:text-[17px] font-normal text-neutral-100 leading-relaxed italic mb-6">
                     {item.quote}
                   </p>
 
                   <div className="pt-4 border-t border-white/20">
-                    <div className="text-xs sm:text-sm font-medium tracking-wide uppercase text-white font-['Montserrat',sans-serif]">
+                    <div className="text-sm sm:text-base font-medium tracking-wide uppercase text-white font-['Montserrat',sans-serif]">
                       {item.author}
                     </div>
-                    <div className="text-[11px] text-neutral-400 font-light mt-0.5 tracking-wider">
+                    <div className="text-xs text-neutral-300 font-normal mt-0.5 tracking-wider">
                       {item.location}
                     </div>
                   </div>

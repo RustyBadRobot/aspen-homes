@@ -82,12 +82,12 @@ export function ProjectDetailPage({ slug, navigate }: ProjectDetailPageProps) {
         {/* Text Section */}
         <div
           id="project-text-content"
-          className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-20 space-y-6 text-neutral-700 font-light text-sm sm:text-[15px] leading-relaxed"
+          className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-20 space-y-6 text-neutral-800 font-normal text-base sm:text-[17px] leading-relaxed"
         >
           {project.description.map((paragraph, idx) => (
             <p
               key={idx}
-              className="[&_a]:text-neutral-900 [&_a]:underline [&_a]:hover:text-black font-light leading-relaxed"
+              className="[&_a]:text-neutral-900 [&_a]:underline [&_a]:hover:text-black font-normal leading-relaxed"
               dangerouslySetInnerHTML={{ __html: paragraph }}
             />
           ))}
@@ -132,7 +132,7 @@ export function ProjectDetailPage({ slug, navigate }: ProjectDetailPageProps) {
       <div className="border-t border-neutral-200 bg-neutral-50 py-6 px-6 sm:px-12">
         <div className="max-w-4xl mx-auto flex items-center justify-between text-xs uppercase tracking-widest text-neutral-600 font-light">
           <button
-            onClick={() => navigate(`/${prevProject.slug}/`)}
+            onClick={() => navigate(`/portfolio/${prevProject.slug}/`)}
             id="prev-project-btn"
             className="flex items-center space-x-2 hover:text-neutral-900 transition-colors cursor-pointer group"
           >
@@ -141,7 +141,7 @@ export function ProjectDetailPage({ slug, navigate }: ProjectDetailPageProps) {
           </button>
 
           <button
-            onClick={() => navigate(`/${nextProject.slug}/`)}
+            onClick={() => navigate(`/portfolio/${nextProject.slug}/`)}
             id="next-project-btn"
             className="flex items-center space-x-2 hover:text-neutral-900 transition-colors cursor-pointer group"
           >

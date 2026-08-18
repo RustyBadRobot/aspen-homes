@@ -147,9 +147,9 @@ export function Header({ currentPath, navigate }: HeaderProps) {
                   key={item.name}
                   onClick={() => handleNavClick(item.path)}
                   id={`nav-item-${item.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                  className={`text-xs sm:text-base md:text-lg lg:text-xl font-light tracking-[0.18em] sm:tracking-[0.22em] transition-all duration-300 uppercase py-0.5 sm:py-1 px-3 sm:px-4 relative group cursor-pointer font-['Montserrat',sans-serif] ${
+                  className={`text-sm sm:text-base md:text-lg lg:text-xl font-normal tracking-[0.18em] sm:tracking-[0.22em] transition-all duration-300 uppercase py-1 px-3 sm:px-4 relative group cursor-pointer font-['Montserrat',sans-serif] ${
                     isActive
-                      ? 'text-white font-normal'
+                      ? 'text-white font-medium'
                       : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -157,7 +157,7 @@ export function Header({ currentPath, navigate }: HeaderProps) {
                     {item.name}
                   </span>
                   <span
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[1px] bg-white transition-all duration-300 ${
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[1.5px] bg-white transition-all duration-300 ${
                       isActive ? 'w-10 opacity-100' : 'w-0 opacity-0 group-hover:w-8 group-hover:opacity-80'
                     }`}
                   />
@@ -167,7 +167,7 @@ export function Header({ currentPath, navigate }: HeaderProps) {
           </div>
 
           {/* Menu Drawer Footer Contact Info */}
-          <div className="border-t border-white/10 pt-4 sm:pt-5 text-center text-xs sm:text-sm text-neutral-400 font-light tracking-wider space-y-1">
+          <div className="border-t border-white/10 pt-4 sm:pt-5 text-center text-xs sm:text-sm text-neutral-400 font-normal tracking-wider space-y-1">
             <p>
               <a href="tel:01483614302" className="hover:text-white transition-colors">
                 01483 614302
@@ -177,7 +177,7 @@ export function Header({ currentPath, navigate }: HeaderProps) {
                 info@aspen-homes.co.uk
               </a>
             </p>
-            <p className="text-neutral-500 text-[10px] sm:text-xs">
+            <p className="text-neutral-500 text-xs">
               43 Meads Road, Guildford, Surrey GU1 2NA
             </p>
           </div>

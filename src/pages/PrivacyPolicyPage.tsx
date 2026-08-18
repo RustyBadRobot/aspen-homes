@@ -11,7 +11,7 @@ export function PrivacyPolicyPage() {
           </p>
         </div>
 
-        <div className="space-y-6 text-xs sm:text-sm font-light leading-relaxed text-neutral-600">
+        <div className="space-y-6 text-base sm:text-[17px] font-normal leading-relaxed text-neutral-700">
           <section className="space-y-2">
             <h2 className="text-base font-medium uppercase tracking-wide text-neutral-900 font-['Montserrat',sans-serif]">
               1. Information We Collect

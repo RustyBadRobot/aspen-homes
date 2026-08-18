@@ -32,7 +32,7 @@ export function CookieBanner({ onOpenPrivacy }: CookieBannerProps) {
       <h2 className="text-sm font-semibold tracking-wider uppercase mb-2 text-neutral-100 font-['Montserrat',sans-serif]">
         COOKIES
       </h2>
-      <p className="text-xs text-neutral-300 leading-relaxed font-light mb-4">
+      <p className="text-xs text-neutral-300 leading-relaxed font-normal mb-4">
         This website or its third party tools use cookies, which are necessary to its
         functioning and required to achieve the purposes illustrated in the cookie
         policy. If you want to know more or withdraw your consent to all or some of the

@@ -45,11 +45,11 @@ export function LandRequiredPage({ navigate }: LandRequiredPageProps) {
 
       {/* Main Content Section */}
       <div id="land-required-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center space-y-8">
-        <h2 className="text-base sm:text-lg md:text-xl font-normal text-neutral-900 tracking-wide font-['Montserrat',sans-serif]">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-neutral-900 leading-relaxed font-['Montserrat',sans-serif] max-w-3xl mx-auto">
           As a company we are continuously looking for new development opportunities in the South East
         </h2>
 
-        <div className="space-y-6 text-xs sm:text-sm font-light text-neutral-600 leading-relaxed text-left sm:text-center max-w-3xl mx-auto">
+        <div className="space-y-6 text-base sm:text-[17px] font-normal text-neutral-700 leading-relaxed text-left sm:text-center max-w-3xl mx-auto">
           <p>
             At Aspen Homes we are always open to new development opportunities. So whether you are a private homeowner with a large garden, or an institution, business or school with land or buildings to spare or need to raise funds for other plans you may have, we’re always happy to provide advice as to the options available to you and take you through the complexities of the planning process. We can also assure you of our complete discretion in deciding what path best suits your needs.
           </p>

@@ -71,7 +71,7 @@ export function PortfolioPage({
           {displayItems.slice().reverse().map((proj) => (
             <div
               key={proj.id}
-              onClick={() => navigate(`/${proj.slug}/`)}
+              onClick={() => navigate(`/portfolio/${proj.slug}/`)}
               id={`portfolio-item-${proj.id}`}
               className="group relative w-full aspect-[3/2] overflow-hidden cursor-pointer bg-neutral-900"
             >
@@ -83,18 +83,18 @@ export function PortfolioPage({
               />
 
               {/* Persistent / Hover Info Panel matching screenshot */}
-              <div className="absolute inset-0 bg-[#2d3032]/80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-8 sm:p-12 text-white">
+              <div className="absolute inset-0 bg-[#2d3032]/85 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center p-8 sm:p-12 text-white">
                 <div className="max-w-md">
-                  <h3 className="text-xl sm:text-2xl font-light font-['Cormorant_Garamond',serif] uppercase tracking-[0.2em] mb-2">
+                  <h3 className="text-xl sm:text-2xl font-normal font-['Cormorant_Garamond',serif] uppercase tracking-[0.2em] mb-2">
                     {proj.title}
                   </h3>
-                  <div className="text-xs font-light text-neutral-300 tracking-widest uppercase mb-4">
+                  <div className="text-xs font-normal text-neutral-300 tracking-widest uppercase mb-4">
                     {formatCategory(proj.category)}
                   </div>
-                  <p className="text-xs sm:text-sm text-neutral-200 font-light leading-relaxed mb-6 line-clamp-3">
+                  <p className="text-sm sm:text-base text-neutral-200 font-normal leading-relaxed mb-6 line-clamp-3">
                     {getCleanSummary(proj)}
                   </p>
-                  <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-white border-b border-white pb-1 group-hover:border-neutral-300">
+                  <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-white border-b border-white pb-1 group-hover:border-neutral-300 font-medium">
                     <span>Explore Development</span>
                     <span>→</span>
                   </div>

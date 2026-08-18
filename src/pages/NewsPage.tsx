@@ -65,15 +65,15 @@ export function NewsPage({ navigate }: NewsPageProps) {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-medium tracking-wide uppercase text-neutral-900 font-['Montserrat',sans-serif] group-hover:text-neutral-600 transition-colors leading-snug">
+                <h3 className="text-base sm:text-lg font-medium tracking-wide uppercase text-neutral-900 font-['Montserrat',sans-serif] group-hover:text-neutral-600 transition-colors leading-snug">
                   {post.title}
                 </h3>
 
-                <div className="text-[11px] text-neutral-400 font-light mt-1.5 mb-2">
+                <div className="text-xs text-neutral-500 font-normal mt-1.5 mb-2">
                   {post.formattedDate}
                 </div>
 
-                <p className="text-xs sm:text-[13px] font-light text-neutral-600 leading-relaxed">
+                <p className="text-sm sm:text-base font-normal text-neutral-700 leading-relaxed">
                   {post.summary}
                 </p>
               </div>

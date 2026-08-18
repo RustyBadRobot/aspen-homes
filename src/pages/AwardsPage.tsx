@@ -35,16 +35,16 @@ export function AwardsPage() {
       </div>
 
       {/* Awards Story Section */}
-      <div id="awards-content-section" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center space-y-6">
-        <p className="text-base sm:text-lg font-light text-neutral-800 leading-relaxed font-['Montserrat',sans-serif]">
+      <div id="awards-content-section" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 text-center space-y-7">
+        <p className="text-lg sm:text-xl md:text-2xl font-normal text-neutral-900 leading-relaxed font-['Montserrat',sans-serif]">
           Aspen Homes is proud to have been nationally and regionally recognised for its work in the residential property and construction sector.
         </p>
 
-        <p className="text-xs sm:text-sm font-light text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-base sm:text-[17px] font-normal text-neutral-700 leading-relaxed max-w-3xl mx-auto">
           As a Surrey-based housebuilder we are particularly delighted to have received two Surrey Property Awards, the first in 2014 for our development at 50 Pewley Hill; two beautifully handcrafted six-bedroom homes in Guildford, and the second in 2016 for our development of Butterfly House also in Guildford – a beautiful five-bedroom family-home set in half an acre of stunning landscaped gardens.
         </p>
 
-        <p className="text-xs sm:text-sm font-light text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-base sm:text-[17px] font-normal text-neutral-700 leading-relaxed max-w-3xl mx-auto">
           50 Pewley Hill was also awarded ‘Top Development’ at the Premier Guarantee Excellence Awards in 2014 – a nationally recognised accolade!
         </p>
       </div>
@@ -62,17 +62,17 @@ export function AwardsPage() {
               />
             </div>
             <div className="p-8 text-center space-y-4 bg-gradient-to-b from-neutral-900 to-black">
-              <div className="font-['Cormorant_Garamond',serif] text-red-600 italic text-3xl font-normal tracking-wide">
+              <div className="font-['Cormorant_Garamond',serif] text-red-600 italic text-3xl sm:text-4xl font-normal tracking-wide">
                 Surrey
               </div>
-              <div className="text-[10px] tracking-[0.3em] uppercase text-neutral-400 font-light">
+              <div className="text-xs tracking-[0.25em] uppercase text-neutral-400 font-normal">
                 Property Awards 2014
               </div>
               <div className="h-[1px] w-16 bg-red-600 mx-auto" />
-              <div className="text-lg uppercase tracking-[0.25em] font-light text-white">
+              <div className="text-lg sm:text-xl uppercase tracking-[0.2em] font-normal text-white">
                 Best New Homes Development
               </div>
-              <p className="text-xs text-neutral-400 font-light">
+              <p className="text-xs text-neutral-400 font-normal">
                 50 Pewley Hill, Guildford
               </p>
             </div>
@@ -91,19 +91,19 @@ export function AwardsPage() {
               </div>
 
               <div className="py-4 space-y-3">
-                <p className="text-xs text-neutral-500 uppercase tracking-widest font-light">
+                <p className="text-xs text-neutral-500 uppercase tracking-widest font-normal">
                   This is to recognise
                 </p>
-                <h4 className="text-lg font-semibold tracking-wider uppercase text-neutral-900 font-['Cinzel',serif]">
+                <h4 className="text-lg sm:text-xl font-semibold tracking-wider uppercase text-neutral-900 font-['Cinzel',serif]">
                   ASPEN HOMES LTD
                 </h4>
-                <p className="text-xs text-neutral-600 font-light">
+                <p className="text-xs sm:text-sm text-neutral-600 font-normal">
                   for their outstanding achievement on their development
                 </p>
-                <div className="text-base font-medium tracking-wide uppercase text-neutral-800">
+                <div className="text-base sm:text-lg font-medium tracking-wide uppercase text-neutral-800">
                   50 PEWLEY HILL
                 </div>
-                <p className="text-[11px] text-neutral-500 font-light max-w-sm mx-auto">
+                <p className="text-xs text-neutral-500 font-normal max-w-sm mx-auto">
                   being listed as a Premier Guarantee Excellence Awards 2014 &ldquo;Top Development&rdquo;
                 </p>
               </div>
@@ -112,7 +112,7 @@ export function AwardsPage() {
                 <div className="font-['Cormorant_Garamond',serif] italic text-sm text-neutral-700">
                   Gary Devaney
                 </div>
-                <div className="text-[10px] text-neutral-400 tracking-wider uppercase mt-0.5">
+                <div className="text-xs text-neutral-500 tracking-wider uppercase mt-0.5 font-normal">
                   Group Chairman and CEO &bull; Premier Guarantee
                 </div>
               </div>

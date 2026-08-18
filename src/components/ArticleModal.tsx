@@ -47,7 +47,7 @@ export function ArticleModal({ post, onClose, navigate }: ArticleModalProps) {
             {post.title}
           </h3>
 
-          <div className="pt-2 space-y-4 text-neutral-300 font-light text-sm sm:text-base leading-relaxed">
+          <div className="pt-2 space-y-4 text-neutral-200 font-normal text-base sm:text-[17px] leading-relaxed">
             {post.content.map((p, idx) => (
               <p key={idx}>{p}</p>
             ))}

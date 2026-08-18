@@ -47,7 +47,7 @@ export function VideosPage() {
       {/* Videos Section */}
       <div id="videos-grid-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <p className="text-sm sm:text-base font-light text-neutral-700 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl font-normal text-neutral-900 leading-relaxed font-['Montserrat',sans-serif]">
             Explore our video walkthroughs, development fly-throughs, and interviews showcasing the precision and craft of our Surrey homes.
           </p>
         </div>
@@ -75,10 +75,10 @@ export function VideosPage() {
           </div>
 
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 bg-gradient-to-t from-black/90 via-black/40 to-transparent text-white">
-            <div className="text-[11px] uppercase tracking-[0.25em] text-neutral-300 font-light mb-1">
+            <div className="text-xs uppercase tracking-[0.25em] text-neutral-300 font-normal mb-1">
               Featured Walkthrough &bull; {mainVideo.duration}
             </div>
-            <h3 className="text-lg sm:text-2xl font-light font-['Cormorant_Garamond',serif] uppercase tracking-wider">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-normal font-['Cormorant_Garamond',serif] uppercase tracking-wider">
               {mainVideo.title}
             </h3>
           </div>
@@ -110,12 +110,12 @@ export function VideosPage() {
                   </div>
                 </div>
 
-                <span className="absolute bottom-2 right-2 bg-black/80 text-white text-[10px] px-2 py-0.5 tracking-wider font-light">
+                <span className="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-0.5 tracking-wider font-normal">
                   {video.duration}
                 </span>
               </div>
 
-              <h4 className="text-xs sm:text-sm font-medium tracking-wide uppercase text-neutral-800 group-hover:text-black transition-colors font-['Montserrat',sans-serif]">
+              <h4 className="text-sm sm:text-base font-medium tracking-wide uppercase text-neutral-900 group-hover:text-black transition-colors font-['Montserrat',sans-serif]">
                 {video.title}
               </h4>
             </div>

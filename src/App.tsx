@@ -64,9 +64,13 @@ export default function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  // Check if current route is a project slug
+  // Check if current route is a project slug (supports /portfolio/:slug/ and /:slug/)
   const matchedProject = ALL_PROJECTS.find(
-    (p) => normalizePath(p.slug) === currentPath || currentPath === `/${p.slug}/`
+    (p) =>
+      currentPath === `/portfolio/${p.slug}/` ||
+      normalizePath(`/portfolio/${p.slug}`) === currentPath ||
+      normalizePath(p.slug) === currentPath ||
+      currentPath === `/${p.slug}/`
   );
 
   // Render the appropriate page based on currentPath

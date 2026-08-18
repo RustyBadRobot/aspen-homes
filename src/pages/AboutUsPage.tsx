@@ -38,16 +38,16 @@ export function AboutUsPage() {
       </div>
 
       {/* Main Narrative Section */}
-      <div id="about-us-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center space-y-6">
-        <p className="text-base sm:text-lg font-light text-neutral-800 leading-relaxed font-['Montserrat',sans-serif]">
+      <div id="about-us-content" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 text-center space-y-7">
+        <p className="text-lg sm:text-xl md:text-2xl font-normal text-neutral-900 leading-relaxed font-['Montserrat',sans-serif] max-w-4xl mx-auto">
           Aspen Homes is an established family-run business in Surrey with longstanding experience in delivering distinctive, high quality homes which provide the perfect environment for modern living.
         </p>
 
-        <p className="text-xs sm:text-sm font-light text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-base sm:text-[17px] font-normal text-neutral-700 leading-relaxed max-w-3xl mx-auto">
           We make sure our homes enhance the character of their locality and make a positive contribution to the street scene in which they are set.
         </p>
 
-        <p className="text-xs sm:text-sm font-light text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-base sm:text-[17px] font-normal text-neutral-700 leading-relaxed max-w-3xl mx-auto">
           Passionately committed to researching the latest in housing innovations, our homes combine the best new building techniques, quality interior architecture, fixtures and fittings as well as providing a contemporary design while retaining traditional values.
         </p>
       </div>
@@ -65,13 +65,13 @@ export function AboutUsPage() {
                 <h3 className="text-base sm:text-lg font-medium tracking-[0.18em] uppercase text-neutral-900 font-['Montserrat',sans-serif]">
                   {member.name}
                 </h3>
-                <div className="text-xs font-light text-neutral-500 tracking-wider mt-1 mb-4">
+                <div className="text-xs sm:text-sm font-normal text-neutral-500 tracking-wider mt-1 mb-4">
                   {member.role}
                 </div>
 
                 <div className="w-8 h-[1px] bg-neutral-300 mb-5 group-hover:w-16 transition-all duration-500" />
 
-                <p className="text-xs sm:text-[13px] font-light text-neutral-600 leading-relaxed">
+                <p className="text-sm sm:text-base font-normal text-neutral-700 leading-relaxed">
                   {member.bio}
                 </p>
               </div>
@@ -80,12 +80,12 @@ export function AboutUsPage() {
                 <a
                   href={`mailto:${member.email}`}
                   id={`email-team-btn-${member.id}`}
-                  className="inline-flex items-center justify-center space-x-2 w-full bg-[#3c4043] hover:bg-black text-white text-[11px] uppercase tracking-[0.2em] px-5 py-3 rounded-none transition-all duration-300 shadow-sm group-hover:shadow cursor-pointer"
+                  className="inline-flex items-center justify-center space-x-2 w-full bg-[#3c4043] hover:bg-black text-white text-xs uppercase tracking-[0.2em] px-5 py-3 rounded-none transition-all duration-300 shadow-sm group-hover:shadow cursor-pointer"
                   title={`Send email to ${member.email}`}
                 >
                   <Mail className="w-3.5 h-3.5 text-neutral-300" />
                   <span>Email {member.name.split(' ')[0]}</span>
-                  <ArrowUpRight className="w-3 h-3 text-neutral-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight className="w-3.5 h-3.5 text-neutral-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
             </div>
