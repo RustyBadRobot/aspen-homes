@@ -17,7 +17,6 @@ export const SOCIAL_LINKS = {
 
 export const NAVIGATION_ITEMS: NavItem[] = [
   { name: 'Home', path: '/' },
-  { name: 'Horseshoe Lane West Updates', path: '/news/' },
   { name: 'Current Developments', path: '/current-developments/' },
   { name: 'Portfolio', path: '/portfolio/' },
   { name: 'About Us', path: '/about-us/' },

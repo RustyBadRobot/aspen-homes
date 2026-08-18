@@ -18,8 +18,8 @@ export function PortfolioPage({ navigate, title = 'Current Developments' }: Port
       {/* Hero Header matching portfolio.png */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85"
-          alt="Surrey Landscape Developments"
+          src="/images/2017/09/Greensleeves-Views_sm.jpg"
+          alt="Current Developments"
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
         <div className="absolute inset-0 bg-black/35" />
