@@ -1057,7 +1057,7 @@ export const COMMUNITY_LIST: CommunityItem[] = [
   {
     id: 'cwsnf',
     title: 'Children with Special Needs Foundation',
-    image: '/images/2017/09/cwsnf-logo.jpg',
+    image: '/images/2017/09/CWSNFGolfDay_crop.jpg',
     fallbackImage: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=80',
     content: [
       'We are proud to be actively involved with the ‘Children with Special Needs Foundation’. The charity provides help to special children and their families, schools and clubs in Surrey, Berkshire and Hampshire.',
@@ -1068,7 +1068,7 @@ export const COMMUNITY_LIST: CommunityItem[] = [
   {
     id: 'guildford-philanthropy',
     title: 'Guildford Philanthropy',
-    image: '/images/2019/05/guildford-philanthropy.jpg',
+    image: '/images/2021/04/GP-e1636045891344.png',
     fallbackImage: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1000&q=80',
     content: [
       'We are delighted to be Corporate Ambassadors for Guildford Philanthropy since 2019. Supporting all the incredible work that Guildford Philanthropy do in the town and surrounding areas has been a privilege for us at Aspen Homes.',
@@ -1083,7 +1083,7 @@ export const COMMUNITY_LIST: CommunityItem[] = [
   {
     id: 'woking-hospice',
     title: 'Woking Hospice',
-    image: '/images/2017/09/woking-hospice.jpg',
+    image: '/images/2017/09/Half-Marathon.jpg',
     fallbackImage: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1000&q=80',
     content: [
       'We are pleased to support Woking Hospice with which we have a personal connection.',
@@ -1094,7 +1094,7 @@ export const COMMUNITY_LIST: CommunityItem[] = [
   {
     id: 'oxshott-village-sign',
     title: 'Oxshott Village Sign',
-    image: '/images/2018/05/oxshott-village-sign-cgi.jpg',
+    image: '/images/2018/03/Oxshott-sign-CGI.jpg',
     fallbackImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80',
     content: [
       'We are always eager to give something back to the communities in which we are operating, so we are delighted to be able to contribute towards the creation of a new village sign in Oxshott.',
@@ -1109,7 +1109,7 @@ export const COMMUNITY_LIST: CommunityItem[] = [
   {
     id: 'three-peaks-challenge',
     title: 'Three Peaks Challenge',
-    image: '/images/2022/04/three-peaks-challenge.jpg',
+    image: '/images/2022/05/3-Peaks-collage-550x550.jpg',
     fallbackImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80',
     content: [
       'On the 22nd April 2022 our Managing Director Joe took on the Three Peaks Challenge alongside the team at Levanter Developments.',
@@ -1119,7 +1119,7 @@ export const COMMUNITY_LIST: CommunityItem[] = [
   {
     id: 'mercy-hospital',
     title: 'Mercy Hospital Childrens Cancer Ward, Ireland',
-    image: '/images/2019/10/mercy-hospital-presentation.jpg',
+    image: '/images/2022/05/Mercy-550x550.jpg',
     fallbackImage: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80',
     content: [
       'It was with great pleasure that our Managing Director Joe Jelley was able to visit the Childrens Cancer Ward at the Mercy Hospital in Cork, Ireland to present their foundation with a cheque for €3150.',
