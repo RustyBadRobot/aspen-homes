@@ -17,7 +17,7 @@ export function NewsPage({ navigate }: NewsPageProps) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-          {NEWS_POSTS.map((post) => (
+          {NEWS_POSTS.slice().reverse().map((post) => (
             <article
               key={post.id}
               onClick={() => navigate(`/news/${post.slug}/`)}
