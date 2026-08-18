@@ -38,6 +38,25 @@ export default function App() {
   };
 
   const [currentPath, setCurrentPath] = useState<string>(() => {
+    // Check if redirected from a static 404 fallback
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const redirectParam = urlParams.get('p') || urlParams.get('path');
+      if (redirectParam) {
+        const cleanPath = normalizePath(redirectParam);
+        window.history.replaceState({}, '', cleanPath);
+        return cleanPath;
+      }
+      const sessionRedirect = sessionStorage.getItem('spa_redirect');
+      if (sessionRedirect) {
+        sessionStorage.removeItem('spa_redirect');
+        const cleanPath = normalizePath(sessionRedirect);
+        window.history.replaceState({}, '', cleanPath);
+        return cleanPath;
+      }
+    } catch {
+      // Ignore errors in sandboxed environments
+    }
     const p = window.location.pathname;
     return normalizePath(p || '/');
   });
