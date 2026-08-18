@@ -43,10 +43,115 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
   {
     id: 'slide-2',
     image: '/images/2017/08/Butterfly-House-Hallway.jpg',
-    alt: 'Hallway of Butterfly House',
-    title: 'Butterfly House',
+    alt: 'Hallway interior of Butterfly House',
+    title: 'Butterfly House Hallway',
     subtitle: ''
   },
+  {
+    id: 'slide-3',
+    image: '/images/2017/11/Photo_1dp_dp_28541807.jpg',
+    alt: 'Property interior view',
+    title: 'Premium Interior',
+    subtitle: ''
+  },
+  {
+    id: 'slide-4',
+    image: '/images/2017/08/Pewley-Heights-Front_crop.jpg',
+    alt: 'Front exterior of Pewley Heights',
+    title: 'Pewley Heights',
+    subtitle: ''
+  },
+  {
+    id: 'slide-5',
+    image: '/images/2017/08/Pewley-Heights-Master-Bed.jpg',
+    alt: 'Master bedroom in Pewley Heights',
+    title: 'Master Bedroom',
+    subtitle: ''
+  },
+  {
+    id: 'slide-6',
+    image: '/images/2017/08/pinehurst-night_new2a.jpg',
+    alt: 'Pinehurst property illuminated at night',
+    title: 'Pinehurst',
+    subtitle: ''
+  },
+  {
+    id: 'slide-7',
+    image: '/images/2017/08/Pewley-Heights-OpenPlanLiving_crop.jpg',
+    alt: 'Open plan living area in Pewley Heights',
+    title: 'Innovative Design',
+    subtitle: ''
+  },
+  {
+    id: 'slide-8',
+    image: '/images/2017/08/Pewley-Hill-Kitchen-new.jpg',
+    alt: 'Modern kitchen in Pewley Hill',
+    title: 'Pewley Hill Kitchen',
+    subtitle: ''
+  },
+  {
+    id: 'slide-9',
+    image: '/images/2017/08/Wellington-House-Front.jpg',
+    alt: 'Front exterior of Wellington House',
+    title: 'Wellington House',
+    subtitle: ''
+  },
+  {
+    id: 'slide-10',
+    image: '/images/2017/08/Butterfly-House-Kitchen.jpg',
+    alt: 'Kitchen interior in Butterfly House',
+    title: 'Butterfly House Kitchen',
+    subtitle: ''
+  },
+  {
+    id: 'slide-11',
+    image: '/images/2017/08/Butterfly-House-Master-Suite.jpg',
+    alt: 'Master suite in Butterfly House',
+    title: 'Master Suite',
+    subtitle: ''
+  },
+  {
+    id: 'slide-12',
+    image: '/images/2017/08/Pewley-Hill-Master.jpg',
+    alt: 'Master bedroom in Pewley Hill',
+    title: 'Pewley Hill',
+    subtitle: ''
+  },
+  {
+    id: 'slide-13',
+    image: '/images/2017/08/Pinehurst-Rear.jpg',
+    alt: 'Rear exterior view of Pinehurst',
+    title: 'Pinehurst Exterior',
+    subtitle: ''
+  },
+  {
+    id: 'slide-14',
+    image: '/images/2017/08/Pewley-Heights-Bed-2-1.jpg',
+    alt: 'Second bedroom in Pewley Heights',
+    title: 'Pewley Heights Bedroom',
+    subtitle: ''
+  },
+  {
+    id: 'slide-15',
+    image: '/images/2017/08/Pewley-Heights-Study.jpg',
+    alt: 'Study room in Pewley Heights',
+    title: 'Pewley Heights Study',
+    subtitle: ''
+  },
+  {
+    id: 'slide-16',
+    image: '/images/2017/08/Butterfly-House-Bed-3.jpg',
+    alt: 'Third bedroom in Butterfly House',
+    title: 'Butterfly House Bedroom',
+    subtitle: ''
+  },
+  {
+    id: 'slide-17',
+    image: '/images/2017/08/Butterfly-House-Dining_crop.jpg',
+    alt: 'Dining area in Butterfly House',
+    title: 'Elegant Dining',
+    subtitle: ''
+  }
 ];
 
 export const CURRENT_DEVELOPMENTS: FeaturedProject[] = [
