@@ -7,6 +7,6 @@ coverage/
 .env*
 !.env.example
 
-# Uploads directory (if any)
-# public/uploads/*
-# !public/uploads/.gitkeep
+# Public images & uploads
+public/images/*
+!public/images/.gitkeep
