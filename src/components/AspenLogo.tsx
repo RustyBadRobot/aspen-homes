@@ -100,14 +100,14 @@ export function AspenLogo({
     <button
       onClick={onClick}
       id="aspen-header-logo-btn"
-      className={`flex flex-col items-center justify-center text-center cursor-pointer group focus:outline-none transition-transform duration-300 hover:scale-[1.02] ${className}`}
+      className={`flex flex-col items-center justify-center text-center cursor-pointer group focus:outline-none ${className}`}
       aria-label="Aspen Homes Home"
     >
       {!imageError ? (
         <img
           src={imageSrc}
           alt="Aspen Homes"
-          className="h-10 sm:h-12 md:h-14 w-auto object-contain max-w-[220px] sm:max-w-[280px] transition-opacity duration-300"
+          className="h-10 sm:h-12 md:h-22 w-auto object-contain max-w-[220px] sm:max-w-[280px] transition-opacity duration-300"
           referrerPolicy="no-referrer"
           onError={() => setImageError(true)}
         />

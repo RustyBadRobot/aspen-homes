@@ -34,8 +34,8 @@ export function ContactUsPage() {
       {/* Hero Header matching contact-us.png */}
       <div className="relative w-full h-[45vh] sm:h-[55vh] md:h-[65vh] bg-black overflow-hidden flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
-          alt="Aspen Homes Architecture"
+          src="/images/2017/09/Pinehurst-Front_sm.jpg"
+          alt="Aspen Homes Contact Us"
           className="w-full h-full object-cover brightness-75"
         />
         <div className="absolute inset-0 bg-black/40" />

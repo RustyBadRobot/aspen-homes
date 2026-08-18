@@ -21,8 +21,8 @@ export function VideosPage() {
       {/* Hero Header matching videos.png */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
-          alt="Aspen Homes Architecture"
+          src="/images/2017/11/Plot-3-Foreman-Manor-14.jpg"
+          alt="Aspen Homes Videos"
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
         <div className="absolute inset-0 bg-black/40" />

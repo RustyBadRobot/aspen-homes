@@ -42,8 +42,8 @@ export function Header({ currentPath, navigate }: HeaderProps) {
         id="main-header"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'bg-black/95 backdrop-blur-md shadow-2xl py-3 sm:py-4 border-b border-white/10'
-            : 'bg-black/90 py-4 sm:py-6'
+            ? 'bg-black/95 backdrop-blur-md shadow-2xl border-b border-white/10'
+            : 'bg-black/90'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">

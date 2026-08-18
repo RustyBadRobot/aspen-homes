@@ -18,8 +18,8 @@ export function AboutUsPage() {
       {/* Hero Header matching about-us.png */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
-          alt="Aspen Homes Architecture"
+          src="/images/2017/08/Butterfly-House-Front_crop2.jpg"
+          alt="Aspen Homes About Us"
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
         <div className="absolute inset-0 bg-black/40" />
