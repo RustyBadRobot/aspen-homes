@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { NEWS_POSTS, getNewsBySlug, getLatestNews } from '../data/newsData';
-import { ArrowLeft, Calendar, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Calendar, Tag, ChevronLeft, ChevronRight, Facebook, Linkedin, Twitter, Share2, Link2, Check } from 'lucide-react';
 
 interface NewsDetailPageProps {
   slug: string;
@@ -7,6 +8,7 @@ interface NewsDetailPageProps {
 }
 
 export function NewsDetailPage({ slug, navigate }: NewsDetailPageProps) {
+  const [copied, setCopied] = useState(false);
   const post = getNewsBySlug(slug);
 
   if (!post) {
@@ -28,6 +30,32 @@ export function NewsDetailPage({ slug, navigate }: NewsDetailPageProps) {
     );
   }
 
+  const articleUrl = typeof window !== 'undefined' ? window.location.href : `https://aspen-homes.co.uk/news/${post.slug}/`;
+
+  const handleShareFacebook = () => {
+    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`;
+    window.open(url, '_blank', 'noopener,noreferrer,width=600,height=500');
+  };
+
+  const handleShareX = () => {
+    const text = `${post.title} | Aspen Homes`;
+    const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener,noreferrer,width=600,height=500');
+  };
+
+  const handleShareLinkedIn = () => {
+    const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`;
+    window.open(url, '_blank', 'noopener,noreferrer,width=600,height=600');
+  };
+
+  const handleCopyLink = () => {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(articleUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    }
+  };
+
   // Find index for prev/next navigation
   const currentIndex = NEWS_POSTS.findIndex(
     (p) => p.slug === post.slug || p.id === post.id
@@ -43,7 +71,7 @@ export function NewsDetailPage({ slug, navigate }: NewsDetailPageProps) {
   return (
     <div className="bg-white min-h-screen pt-24 sm:pt-28 pb-24">
       {/* Top Breadcrumb / Back Bar */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 flex items-center justify-between">
         <button
           onClick={() => navigate('/news/')}
           className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.2em] text-neutral-600 hover:text-black transition-colors cursor-pointer group"
@@ -51,6 +79,37 @@ export function NewsDetailPage({ slug, navigate }: NewsDetailPageProps) {
           <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
           <span>Back to all news</span>
         </button>
+
+        {/* Header Social Share Icons */}
+        <div className="flex items-center space-x-2">
+          <span className="text-[11px] uppercase tracking-widest text-neutral-400 font-medium hidden sm:inline mr-1">
+            Share:
+          </span>
+          <button
+            onClick={handleShareFacebook}
+            title="Share on Facebook"
+            aria-label="Share on Facebook"
+            className="w-8 h-8 rounded-full bg-neutral-100 hover:bg-[#1877F2] text-neutral-600 hover:text-white flex items-center justify-center transition-all cursor-pointer"
+          >
+            <Facebook className="w-3.5 h-3.5" />
+          </button>
+          <button
+            onClick={handleShareX}
+            title="Share on X"
+            aria-label="Share on X"
+            className="w-8 h-8 rounded-full bg-neutral-100 hover:bg-black text-neutral-600 hover:text-white flex items-center justify-center transition-all cursor-pointer"
+          >
+            <Twitter className="w-3.5 h-3.5" />
+          </button>
+          <button
+            onClick={handleShareLinkedIn}
+            title="Share on LinkedIn"
+            aria-label="Share on LinkedIn"
+            className="w-8 h-8 rounded-full bg-neutral-100 hover:bg-[#0A66C2] text-neutral-600 hover:text-white flex items-center justify-center transition-all cursor-pointer"
+          >
+            <Linkedin className="w-3.5 h-3.5" />
+          </button>
+        </div>
       </div>
 
       {/* Main Article Container */}
@@ -60,7 +119,7 @@ export function NewsDetailPage({ slug, navigate }: NewsDetailPageProps) {
           {post.category && (
             <div className="inline-flex items-center space-x-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500 bg-neutral-100 px-3 py-1 rounded-full">
               <Tag className="w-3 h-3" />
-              <span>{post.category}</span>
+              <span>{Array.isArray(post.category) ? post.category.join(', ') : post.category}</span>
             </div>
           )}
 
@@ -83,7 +142,7 @@ export function NewsDetailPage({ slug, navigate }: NewsDetailPageProps) {
         </header>
 
         {/* Featured Image */}
-        {post.image && (
+        {post.image && post.image.trim() !== '' && (
           <div className="w-full aspect-[16/10] sm:aspect-[16/9] bg-neutral-100 overflow-hidden shadow-xs">
             <img
               src={post.image}
@@ -102,6 +161,67 @@ export function NewsDetailPage({ slug, navigate }: NewsDetailPageProps) {
           {post.content.map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
           ))}
+        </div>
+
+        {/* Social Share Callout Box */}
+        <div className="bg-neutral-50 border border-neutral-200/80 p-5 sm:p-6 rounded-xs mt-10">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="space-y-1">
+              <div className="text-xs uppercase tracking-[0.2em] font-medium text-neutral-900 flex items-center space-x-2">
+                <Share2 className="w-3.5 h-3.5 text-neutral-500" />
+                <span>Share this article</span>
+              </div>
+              <p className="text-xs text-neutral-500">
+                Share this update with your network or contacts
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2.5">
+              {/* Share on Facebook */}
+              <button
+                onClick={handleShareFacebook}
+                id="share-facebook-btn"
+                className="inline-flex items-center space-x-2 px-3.5 py-2 bg-white hover:bg-[#1877F2] text-neutral-800 hover:text-white border border-neutral-200 hover:border-[#1877F2] rounded-xs text-xs font-medium uppercase tracking-wider transition-colors cursor-pointer shadow-2xs"
+              >
+                <Facebook className="w-3.5 h-3.5" />
+                <span>Facebook</span>
+              </button>
+
+              {/* Share on X */}
+              <button
+                onClick={handleShareX}
+                id="share-x-btn"
+                className="inline-flex items-center space-x-2 px-3.5 py-2 bg-white hover:bg-black text-neutral-800 hover:text-white border border-neutral-200 hover:border-black rounded-xs text-xs font-medium uppercase tracking-wider transition-colors cursor-pointer shadow-2xs"
+              >
+                <Twitter className="w-3.5 h-3.5" />
+                <span>X</span>
+              </button>
+
+              {/* Share on LinkedIn */}
+              <button
+                onClick={handleShareLinkedIn}
+                id="share-linkedin-btn"
+                className="inline-flex items-center space-x-2 px-3.5 py-2 bg-white hover:bg-[#0A66C2] text-neutral-800 hover:text-white border border-neutral-200 hover:border-[#0A66C2] rounded-xs text-xs font-medium uppercase tracking-wider transition-colors cursor-pointer shadow-2xs"
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+                <span>LinkedIn</span>
+              </button>
+
+              {/* Copy Link */}
+              <button
+                onClick={handleCopyLink}
+                id="share-copy-link-btn"
+                className={`inline-flex items-center space-x-2 px-3.5 py-2 border rounded-xs text-xs font-medium uppercase tracking-wider transition-colors cursor-pointer shadow-2xs ${
+                  copied
+                    ? 'bg-emerald-600 text-white border-emerald-600'
+                    : 'bg-white hover:bg-neutral-100 text-neutral-800 border-neutral-200'
+                }`}
+              >
+                {copied ? <Check className="w-3.5 h-3.5" /> : <Link2 className="w-3.5 h-3.5" />}
+                <span>{copied ? 'Copied' : 'Copy'}</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Previous / Next Article Navigation */}
@@ -158,14 +278,16 @@ export function NewsDetailPage({ slug, navigate }: NewsDetailPageProps) {
                 className="bg-white group cursor-pointer flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-full aspect-[3/2] overflow-hidden bg-neutral-100 mb-3">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
+                  {item.image && item.image.trim() !== '' && (
+                    <div className="w-full aspect-[3/2] overflow-hidden bg-neutral-100 mb-3">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
                   <div className="text-xs text-neutral-500 mb-1">{item.formattedDate}</div>
                   <h3 className="text-base font-medium tracking-wide uppercase text-neutral-900 font-['Montserrat',sans-serif] group-hover:text-neutral-600 transition-colors line-clamp-2">
                     {item.title}

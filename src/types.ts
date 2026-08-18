@@ -54,8 +54,9 @@ export interface NewsPost {
   summary: string;
   content: string[];
   image: string;
-  category?: string;
+  category?: string | string[];
   author?: string;
+  gallery?: string[];
 }
 
 export interface TestimonialItem {

@@ -30,14 +30,16 @@ export function ArticleModal({ post, onClose, navigate }: ArticleModalProps) {
           </svg>
         </button>
 
-        <div className="w-full aspect-[3/2] max-h-[380px] overflow-hidden relative">
-          <img
-            src={post.image}
-            alt={post.title}
-            className="w-full h-full object-cover aspect-[3/2]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent" />
-        </div>
+        {post.image && post.image.trim() !== '' && (
+          <div className="w-full aspect-[3/2] max-h-[380px] overflow-hidden relative">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-full object-cover aspect-[3/2]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent" />
+          </div>
+        )}
 
         <div className="p-6 sm:p-10 space-y-4">
           <div className="text-xs uppercase tracking-[0.25em] text-neutral-400 font-light">
