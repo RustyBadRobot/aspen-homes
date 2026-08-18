@@ -33,6 +33,15 @@
   background: #666;
 }
 
+/* Hide scrollbar while allowing scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Splide custom bullet styling matching Aspen Homes */
 .splide__pagination__page {
   background: rgba(255, 255, 255, 0.4) !important;

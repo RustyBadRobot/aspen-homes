@@ -31,6 +31,17 @@ export function Header({ currentPath, navigate }: HeaderProps) {
     };
   }, [isMenuOpen]);
 
+  // Handle ESC key to close menu
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isMenuOpen]);
+
   const handleNavClick = (path: string) => {
     navigate(path);
     setIsMenuOpen(false);
@@ -87,26 +98,25 @@ export function Header({ currentPath, navigate }: HeaderProps) {
 
           {/* Right Action Icons (Menu Toggle) */}
           <div className="flex items-center justify-end space-x-3 sm:space-x-5 w-1/4">
-            {/* Menu Toggle Hamburger */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle navigation menu"
+              aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={isMenuOpen}
               id="header-menu-toggle-btn"
-              className="text-white/90 hover:text-white p-1.5 focus:outline-none cursor-pointer flex flex-col justify-center items-center w-8 h-8 space-y-1.5 group"
+              className="text-white/90 hover:text-white p-2 focus:outline-none cursor-pointer flex flex-col justify-center items-center w-8 h-8 space-y-1.5 group"
             >
               <span
-                className={`block h-0.5 w-6 bg-white transition-transform duration-300 ease-in-out ${
+                className={`block h-[1.5px] w-6 bg-white transition-transform duration-300 ease-in-out ${
                   isMenuOpen ? 'rotate-45 translate-y-2' : ''
                 }`}
               />
               <span
-                className={`block h-0.5 w-6 bg-white transition-opacity duration-300 ${
+                className={`block h-[1.5px] w-6 bg-white transition-opacity duration-300 ${
                   isMenuOpen ? 'opacity-0' : 'opacity-100'
                 }`}
               />
               <span
-                className={`block h-0.5 w-6 bg-white transition-transform duration-300 ease-in-out ${
+                className={`block h-[1.5px] w-6 bg-white transition-transform duration-300 ease-in-out ${
                   isMenuOpen ? '-rotate-45 -translate-y-2' : ''
                 }`}
               />
@@ -115,17 +125,18 @@ export function Header({ currentPath, navigate }: HeaderProps) {
         </div>
       </header>
 
-      {/* Fullscreen Sliding Navigation Overlay */}
+      {/* Fullscreen Architectural Navigation Overlay */}
       <div
         id="navigation-drawer-overlay"
         className={`fixed inset-0 z-40 bg-black/95 backdrop-blur-xl transition-all duration-500 ease-in-out ${
           isMenuOpen
-            ? 'opacity-100 pointer-events-auto'
-            : 'opacity-0 pointer-events-none'
+            ? 'opacity-100 pointer-events-auto visible'
+            : 'opacity-0 pointer-events-none invisible'
         }`}
       >
-        <div className="h-full flex flex-col justify-between max-w-4xl mx-auto px-6 pt-28 pb-12 overflow-y-auto">
-          <div className="flex flex-col items-center justify-center my-auto space-y-3 sm:space-y-4 text-center">
+        <div className="h-full flex flex-col justify-between max-w-4xl mx-auto px-6 pt-20 sm:pt-24 pb-6 sm:pb-8 overflow-y-auto no-scrollbar">
+          {/* Centered Navigation Links List */}
+          <div className="flex flex-col items-center justify-center my-auto py-2 sm:py-4 space-y-1 sm:space-y-2 md:space-y-2.5 text-center">
             {NAVIGATION_ITEMS.map((item) => {
               const isActive =
                 currentPath === item.path ||
@@ -136,16 +147,18 @@ export function Header({ currentPath, navigate }: HeaderProps) {
                   key={item.name}
                   onClick={() => handleNavClick(item.path)}
                   id={`nav-item-${item.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                  className={`text-base sm:text-xl md:text-2xl font-light tracking-[0.18em] transition-all duration-300 uppercase py-1 px-4 relative group cursor-pointer ${
+                  className={`text-xs sm:text-base md:text-lg lg:text-xl font-light tracking-[0.18em] sm:tracking-[0.22em] transition-all duration-300 uppercase py-0.5 sm:py-1 px-3 sm:px-4 relative group cursor-pointer font-['Montserrat',sans-serif] ${
                     isActive
                       ? 'text-white font-normal'
                       : 'text-neutral-400 hover:text-white'
                   }`}
                 >
-                  <span className="relative z-10">{item.name}</span>
+                  <span className="relative z-10 transition-transform duration-300 inline-block group-hover:scale-105">
+                    {item.name}
+                  </span>
                   <span
                     className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[1px] bg-white transition-all duration-300 ${
-                      isActive ? 'w-12' : 'w-0 group-hover:w-8'
+                      isActive ? 'w-10 opacity-100' : 'w-0 opacity-0 group-hover:w-8 group-hover:opacity-80'
                     }`}
                   />
                 </button>
@@ -154,12 +167,24 @@ export function Header({ currentPath, navigate }: HeaderProps) {
           </div>
 
           {/* Menu Drawer Footer Contact Info */}
-          <div className="border-t border-white/10 pt-6 text-center text-xs sm:text-sm text-neutral-400 font-light tracking-wider space-y-2">
-            <p>01483 614302 &nbsp;|&nbsp; info@aspen-homes.co.uk</p>
-            <p className="text-neutral-400">43 Meads Road, Guildford, Surrey GU1 2NA</p>
+          <div className="border-t border-white/10 pt-4 sm:pt-5 text-center text-xs sm:text-sm text-neutral-400 font-light tracking-wider space-y-1">
+            <p>
+              <a href="tel:01483614302" className="hover:text-white transition-colors">
+                01483 614302
+              </a>
+              <span className="mx-2 text-neutral-600">&bull;</span>
+              <a href="mailto:info@aspen-homes.co.uk" className="hover:text-white transition-colors">
+                info@aspen-homes.co.uk
+              </a>
+            </p>
+            <p className="text-neutral-500 text-[10px] sm:text-xs">
+              43 Meads Road, Guildford, Surrey GU1 2NA
+            </p>
           </div>
         </div>
       </div>
     </>
   );
 }
+
+
