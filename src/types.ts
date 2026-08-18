@@ -16,7 +16,7 @@ export interface FeaturedProject {
   id: string;
   slug: string;
   title: string;
-  category: string;
+  category: string | string[];
   image: string;
   summary?: string;
   description: string[];

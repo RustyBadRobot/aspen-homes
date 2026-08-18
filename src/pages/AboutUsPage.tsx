@@ -1,11 +1,7 @@
-import { useState } from 'react';
 import { TEAM_MEMBERS } from '../data/mockData';
-import { TeamMember } from '../types';
-import { EmailModal } from '../components/EmailModal';
+import { Mail, ArrowUpRight } from 'lucide-react';
 
 export function AboutUsPage() {
-  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
-
   const scrollToContent = () => {
     const el = document.getElementById('about-us-content');
     if (el) {
@@ -57,48 +53,45 @@ export function AboutUsPage() {
       </div>
 
       {/* Team Grid Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {TEAM_MEMBERS.map((member) => (
             <div
               key={member.id}
-              className="flex flex-col justify-between text-left p-2 sm:p-4"
+              id={`team-card-${member.id}`}
+              className="bg-neutral-50/60 border border-neutral-200/80 rounded-sm p-6 sm:p-8 flex flex-col justify-between hover:border-neutral-400/80 hover:bg-white hover:shadow-md transition-all duration-300 group"
             >
               <div>
-                <h3 className="text-base sm:text-lg font-normal tracking-[0.2em] uppercase text-neutral-900 font-['Montserrat',sans-serif]">
+                <h3 className="text-base sm:text-lg font-medium tracking-[0.18em] uppercase text-neutral-900 font-['Montserrat',sans-serif]">
                   {member.name}
                 </h3>
                 <div className="text-xs font-light text-neutral-500 tracking-wider mt-1 mb-4">
                   {member.role}
                 </div>
+
+                <div className="w-8 h-[1px] bg-neutral-300 mb-5 group-hover:w-16 transition-all duration-500" />
+
                 <p className="text-xs sm:text-[13px] font-light text-neutral-600 leading-relaxed">
                   {member.bio}
                 </p>
               </div>
 
-              <div className="mt-8">
-                <button
-                  onClick={() => setSelectedMember(member)}
+              <div className="mt-8 pt-6 border-t border-neutral-200/70">
+                <a
+                  href={`mailto:${member.email}`}
                   id={`email-team-btn-${member.id}`}
-                  className="bg-[#b3b8bc] hover:bg-neutral-700 text-white hover:text-white text-[11px] uppercase tracking-[0.2em] px-6 py-2.5 rounded-full transition-all duration-300 shadow-sm cursor-pointer"
+                  className="inline-flex items-center justify-center space-x-2 w-full bg-[#3c4043] hover:bg-black text-white text-[11px] uppercase tracking-[0.2em] px-5 py-3 rounded-none transition-all duration-300 shadow-sm group-hover:shadow cursor-pointer"
+                  title={`Send email to ${member.email}`}
                 >
-                  Email {member.name.split(' ')[0]}
-                </button>
+                  <Mail className="w-3.5 h-3.5 text-neutral-300" />
+                  <span>Email {member.name.split(' ')[0]}</span>
+                  <ArrowUpRight className="w-3 h-3 text-neutral-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
               </div>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Contact Modal */}
-      {selectedMember && (
-        <EmailModal
-          isOpen={!!selectedMember}
-          recipientName={selectedMember.name}
-          recipientEmail={selectedMember.email}
-          onClose={() => setSelectedMember(null)}
-        />
-      )}
     </div>
   );
 }

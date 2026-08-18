@@ -21,6 +21,14 @@ export function PortfolioPage({
     }
   };
 
+  const formatCategory = (cat?: string | string[]) => {
+    if (!cat) return '';
+    if (Array.isArray(cat)) {
+      return cat.map((c) => c.replace(/-/g, ' ')).join(', ');
+    }
+    return cat;
+  };
+
   const getCleanSummary = (proj: FeaturedProject) => {
     if (proj.summary) return proj.summary;
     if (proj.description && proj.description.length > 0) {
@@ -81,7 +89,7 @@ export function PortfolioPage({
                     {proj.title}
                   </h3>
                   <div className="text-xs font-light text-neutral-300 tracking-widest uppercase mb-4">
-                    {proj.category}
+                    {formatCategory(proj.category)}
                   </div>
                   <p className="text-xs sm:text-sm text-neutral-200 font-light leading-relaxed mb-6 line-clamp-3">
                     {getCleanSummary(proj)}
