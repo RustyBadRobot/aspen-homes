@@ -11,7 +11,7 @@ export function SustainabilityPage() {
       {/* Hero Header */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=2000&q=85"
+          src="/images/2022/01/noah-buscher-x8ZStukS2PM-unsplash.jpg"
           alt="Sustainability & Modern Construction"
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
@@ -37,21 +37,31 @@ export function SustainabilityPage() {
       {/* Main Content Section */}
       <div id="sustainability-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center space-y-8">
         <h2 className="text-lg sm:text-xl font-normal text-neutral-900 tracking-wide font-['Montserrat',sans-serif]">
-          Building Responsibly for the Future of Surrey
+          We strive to make sure all of our developments are sustainable and environmentally friendly. We look to build solid, traditional houses but with the environment in mind.
         </h2>
 
         <div className="space-y-6 text-xs sm:text-sm font-light text-neutral-600 leading-relaxed text-left sm:text-center max-w-3xl mx-auto">
-          <p>
-            At Aspen Homes, sustainability is integrated into every phase of our construction lifecycle. From ground-source heating solutions and air-source heat pumps to super-insulated building envelopes and sustainable drainage systems (SuDS), our focus is on lowering operational carbon while providing supremely comfortable living spaces.
-          </p>
-
-          <p>
-            We prioritize responsibly sourced timber certified by FSC/PEFC, high-efficiency double and triple glazing, EV charging preparation in all garages, and smart thermostat systems that optimize energy consumption effortlessly.
-          </p>
-
-          <p>
-            By designing homes that harmonise with natural ecology and preserve existing mature trees and hedgerows, we ensure biodiversity net gains for Surrey’s picturesque green landscapes.
-          </p>
+          <p>On all of our developments we liaise with a professional energy consultant to look at the fabric of our buildings to ensure we are using the latest advancements in insulation, ventilation and renewable energies. We always look to push the boundaries and exceed standard practice so our houses are not only sustainable for the future but they are also more economical to run. In terms of our environmental approach we would look to landscape the communal areas and gardens in such a way that it protects and enhances the biodiversity of the area. We would look to add log piles and specific planting to suitable areas of the site to encourage wildlife to remain within the area. We would also ensure that lighting within the development would be downward facing and softened in communal areas so any bat roosts would not be affected as well as ensuring their flight paths are maintained. Obviously, every site is different and if we are in a position to move forward with a planning application we would seek to use our ecologist to provide site specific solutions and ideas.</p>
+          <p>In addition to the above we have also been looking at sustainability as a whole, in respect to the overall running of our business as well as improving and identifying ways to create higher levels of sustainability within our developments. Sustainability is paramount to the ongoing contribution we can make to our environment as well as welfare for the individuals within our business and network. It is an ethos that we want to be ingrained within our business to enhance how we operate as a whole. Sustainability focuses on three main areas as covered by the term ESG, Environmental, Social &amp; Governance. All are equally important in ensuring we deliver sustainability throughout the whole of our business. Environmental elements focuses on carbon emissions, renewables, waste, water efficiency, air quality etc. Social aspects focuses on safety &amp; well-being, diversity, product safety, responsible sourcing, education etc. Governance elements focuses on business ethics, legal compliance, political lobbying.</p>
+          <p>As a company Aspen homes is committed to enhanced sustainability across all of our developments and as such have listed below an example of how we look to achieve this within our proposals.</p>
+          <ul>
+            <li>An increase in renewable energy on site, above the recommended standard.</li>
+            <li>The use of triple glazed windows to all of the new houses to increase the thermal performance.</li>
+            <li>The air tightness of our houses is vitally important and measures are put in place to seal the houses throughout the construction process so we can minimise any air leakage once the houses have been completed.</li>
+            <li>The increased movement of fresh air within the property through enhanced ventilation, mechanically and through trickle vents.</li>
+            <li>Increased Water Efficiency on site through reduced flow rates from taps and showers through air performance showers and fittings.</li>
+            <li>EV charging points to encourage the use of electric cars.</li>
+            <li>Highly energy efficient appliances – A** rating</li>
+            <li>Enhanced insulation within the cavity, floor and roof of all houses.</li>
+            <li>Responsibly sourced materials where we look at the carbon footprint of the materials coming into our site.&nbsp; We have a focus on sourcing materials locally.</li>
+            <li>Sustainable urban drainage systems (SUD’s) where applicable within each development.</li>
+            <li>Waste management is conducted throughout the development to ensure waste leaving site is recycled wherever possible.</li>
+            <li>Assessing the sustainability of our suppliers and contractors to ensure they are also looking at enhancing sustainability within their business.</li>
+            <li>We continuously look at evolving technologies and methods of construction to see if we feel there are any appropriate measures we can take to further enhance the sustainability our developments.</li>
+            <li>Ensure all timber used on site is responsible and sustainably sourced.</li>
+            <li>Enhanced biodiversity, to include nature habitats and wildflower areas to ensure local wildlife can flourish.</li>
+            <li>Protective measures are put in place on sites to ensure all wildlife is preserved during the construction process.</li>
+          </ul>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ export function LocalCommunityPage() {
       {/* Hero Header */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85"
+          src="/images/2017/09/Chestnut-House-Gates_sm.jpg"
           alt="Surrey Local Community"
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />

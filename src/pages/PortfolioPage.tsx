@@ -42,7 +42,7 @@ export function PortfolioPage({
       {/* Hero Header matching portfolio.png */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
-          src="/images/2017/09/Greensleeves-Views_sm.jpg"
+          src="/images/2017/08/pinehurst-night_new.jpg"
           alt={title}
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
@@ -68,7 +68,7 @@ export function PortfolioPage({
       {/* Grid of Developments with hover effect */}
       <div id="portfolio-grid-section" className="w-full">
         <div className={`grid grid-cols-1 ${displayItems.length > 1 ? 'md:grid-cols-2' : 'max-w-4xl mx-auto'}`}>
-          {displayItems.map((proj) => (
+          {displayItems.slice().reverse().map((proj) => (
             <div
               key={proj.id}
               onClick={() => navigate(`/${proj.slug}/`)}

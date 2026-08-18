@@ -15,7 +15,7 @@ export function CustomerServicePage({ navigate }: CustomerServicePageProps) {
       {/* Hero Header */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85"
+          src="/images/2017/08/Butterfly-House-Kitchen_sm.jpg"
           alt="Aspen Homes Customer Care"
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
@@ -41,21 +41,13 @@ export function CustomerServicePage({ navigate }: CustomerServicePageProps) {
       {/* Main Content */}
       <div id="customer-service-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center space-y-8">
         <h2 className="text-lg sm:text-xl font-normal text-neutral-900 tracking-wide font-['Montserrat',sans-serif]">
-          Dedicated Care Before, During, and Long After Key Handover
+          At Aspen Homes we ensure our clients receive an exemplary service which starts from the day they reserve their home, and continues long after they’ve moved in.
         </h2>
 
         <div className="space-y-6 text-xs sm:text-sm font-light text-neutral-600 leading-relaxed text-left sm:text-center max-w-3xl mx-auto">
-          <p>
-            Purchasing an Aspen Home is an exceptional milestone, and we believe our relationship with our purchasers is paramount. From your initial reservation right through to moving day and beyond, our directors and customer care team are directly reachable.
-          </p>
-
-          <p>
-            Every Aspen Home comes backed with a comprehensive 10-Year Premier Guarantee or NHBC structural warranty, accompanied by our dedicated 2-year Aspen developer warranty covering all fixtures, fittings, and mechanical installations.
-          </p>
-
-          <p>
-            On completion, you receive a full bespoke Homeowner Demonstration, comprehensive digital and printed handover manuals, and direct emergency contact protocols for 24/7 peace of mind.
-          </p>
+          <p>Everything we do is to make their experience of home-buying as seamless and stress-free as possible.</p>
+          <p>Shortly before your home is ready, we undertake a full inspection of your new home and identify any remaining issues so that the day you collect the keys, you are able to start enjoying your new home as soon as you step through the door. We will also demonstrate how your home ‘works’, as well as all the appliances and leave you with a comprehensive manual as a reminder. As a hands-on niche housebuilder, we’re able to continue to provide an after-sales service long after you’ve moved in to ensure you enjoy and settle in to your new home.</p>
+          <p>All of our homes are also constructed to the highest standard which is strictly monitored by a surveyor at <a href="https://www.premierguarantee.com/">Premier Guarantee</a>, which provides a 10-year new home guarantee; please click on their logo below if you would like any further information.</p>
         </div>
 
         <div className="pt-4">

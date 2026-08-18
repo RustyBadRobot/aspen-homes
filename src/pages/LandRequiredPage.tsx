@@ -20,7 +20,7 @@ export function LandRequiredPage({ navigate }: LandRequiredPageProps) {
       {/* Hero Header matching land-required.png */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=2000&q=85"
+          src="/images/2017/09/Waverley-Heights_sm_crop.jpg"
           alt="Aspen Homes Development Land"
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
@@ -46,7 +46,7 @@ export function LandRequiredPage({ navigate }: LandRequiredPageProps) {
       {/* Main Content Section */}
       <div id="land-required-content" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center space-y-8">
         <h2 className="text-base sm:text-lg md:text-xl font-normal text-neutral-900 tracking-wide font-['Montserrat',sans-serif]">
-          As a company we are continuously looking for new development opportunities in the South East.
+          As a company we are continuously looking for new development opportunities in the South East
         </h2>
 
         <div className="space-y-6 text-xs sm:text-sm font-light text-neutral-600 leading-relaxed text-left sm:text-center max-w-3xl mx-auto">

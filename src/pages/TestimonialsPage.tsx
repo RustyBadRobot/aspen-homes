@@ -16,7 +16,7 @@ export function TestimonialsPage() {
       {/* Hero Header */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
+          src="/images/2017/09/Flat-2_sm.jpg"
           alt="Aspen Homes Architecture"
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
