@@ -1,0 +1,6 @@
+{
+  "name": "Aspen Homes",
+  "description": "Bespoke luxury housebuilder in Surrey delivering award-winning developments with inspirational design and aspirational living.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
