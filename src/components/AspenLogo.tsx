@@ -102,7 +102,8 @@ export function AspenLogo({
       <img
         src={imageSrc}
         alt="Aspen Homes"
-        className="h-10 sm:h-12 md:h-22 w-auto object-contain max-w-[220px] sm:max-w-[280px] transition-opacity duration-300"
+        className="h-10 sm:h-12 md:h-[72.5px] max-h-[72.5px] w-auto max-w-[220px] sm:max-w-[280px] md:max-w-[364px] object-contain transition-all duration-300"
+        style={{ aspectRatio: '364 / 72.5' }}
         referrerPolicy="no-referrer"
       />
     </button>

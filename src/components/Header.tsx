@@ -46,7 +46,7 @@ export function Header({ currentPath, navigate }: HeaderProps) {
             : 'bg-black/90'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 flex items-center justify-between">
           {/* Left Social Icons */}
           <div className="flex items-center space-x-2 sm:space-x-3 w-1/4">
             <a
