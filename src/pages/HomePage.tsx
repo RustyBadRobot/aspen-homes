@@ -64,7 +64,7 @@ export function HomePage({ navigate }: HomePageProps) {
                     {/* Subtitle Caption Overlay if not empty */}
                     {slide.subtitle && slide.subtitle.trim() !== '' && (
                       <div className="absolute inset-x-0 bottom-12 sm:bottom-16 flex justify-center px-4 sm:px-8 z-10 pointer-events-none">
-                        <div className="bg-black/20 backdrop-blur-xs text-white max-w-4xl px-6 py-3 sm:px-10 sm:py-4 text-center rounded-xs pointer-events-auto border-0 shadow-none">
+                        <div className="bg-black/10 backdrop-blur-xs text-white max-w-4xl px-6 py-3 sm:px-10 sm:py-4 text-center rounded-xs pointer-events-auto border-0 shadow-none">
                           <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light italic text-white leading-relaxed font-['Cormorant_Garamond',serif] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                             {slide.subtitle}
                           </p>
