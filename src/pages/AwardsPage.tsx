@@ -83,7 +83,7 @@ export function AwardsPage() {
               </div>
 
               {/* Stacked Image 2: Award Plaque / Certificate Image */}
-              <div className="relative w-full aspect-[1/1] sm:aspect-[4/3] bg-neutral-950 overflow-hidden border-t border-neutral-800 group">
+              <div className="relative w-full aspect-square bg-neutral-950 overflow-hidden border-t border-neutral-800 group">
                 <img
                   src={award.awardImage}
                   alt={`${award.organization} - ${award.title}`}
@@ -92,23 +92,9 @@ export function AwardsPage() {
                       (e.target as HTMLImageElement).src = award.fallbackAwardImage;
                     }
                   }}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full aspect-square object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-              </div>
-
-              {/* Award Information & Details */}
-              <div className="p-6 text-center space-y-3 bg-gradient-to-b from-neutral-900 to-neutral-950 border-t border-neutral-800/80">
-                <div className="text-xs uppercase tracking-[0.25em] text-neutral-400 font-normal">
-                  {award.organization}
-                </div>
-                <h3 className="text-lg sm:text-xl font-normal font-['Cormorant_Garamond',serif] uppercase tracking-wider text-white leading-snug">
-                  {award.title}
-                </h3>
-                <div className="h-[1px] w-12 bg-neutral-700 mx-auto" />
-                <p className="text-xs text-neutral-400 font-normal">
-                  {award.development}
-                </p>
               </div>
             </div>
           ))}
