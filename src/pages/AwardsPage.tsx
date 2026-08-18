@@ -1,3 +1,5 @@
+import { AWARDS_LIST } from '../data/mockData';
+
 export function AwardsPage() {
   const scrollToContent = () => {
     const el = document.getElementById('awards-content-section');
@@ -8,11 +10,15 @@ export function AwardsPage() {
 
   return (
     <div className="bg-white min-h-screen pt-20 sm:pt-24">
-      {/* Hero Header matching awards.png */}
+      {/* Hero Header */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
           src="/images/2017/08/Pewley-Hill-Study_sm.jpg"
           alt="Luxury Surrey Interior"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src =
+              'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80';
+          }}
           className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -49,80 +55,63 @@ export function AwardsPage() {
         </p>
       </div>
 
-      {/* Certificates and Award Displays matching awards.png */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Surrey Property Award Plaque */}
-          <div className="bg-black text-white shadow-xl overflow-hidden flex flex-col border border-neutral-800">
-            <div className="w-full aspect-[3/2] overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
-                alt="50 Pewley Hill Guildford"
-                className="w-full h-full object-cover aspect-[3/2]"
-              />
-            </div>
-            <div className="p-8 text-center space-y-4 bg-gradient-to-b from-neutral-900 to-black">
-              <div className="font-['Cormorant_Garamond',serif] text-red-600 italic text-3xl sm:text-4xl font-normal tracking-wide">
-                Surrey
-              </div>
-              <div className="text-xs tracking-[0.25em] uppercase text-neutral-400 font-normal">
-                Property Awards 2014
-              </div>
-              <div className="h-[1px] w-16 bg-red-600 mx-auto" />
-              <div className="text-lg sm:text-xl uppercase tracking-[0.2em] font-normal text-white">
-                Best New Homes Development
-              </div>
-              <p className="text-xs text-neutral-400 font-normal">
-                50 Pewley Hill, Guildford
-              </p>
-            </div>
-          </div>
-
-          {/* Premier Guarantee Certificate Plaque */}
-          <div className="bg-white text-neutral-900 border border-neutral-200 shadow-xl p-8 sm:p-10 flex flex-col justify-between text-center relative font-['Montserrat',sans-serif]">
-            <div className="space-y-4">
-              <div className="border-b-2 border-neutral-800 pb-4">
-                <div className="text-2xl sm:text-3xl font-bold tracking-tight text-cyan-900 font-['Cinzel',serif]">
-                  EXCELLENCE
-                </div>
-                <div className="text-xs sm:text-sm uppercase tracking-[0.25em] text-neutral-600 font-medium">
-                  Top Developments AWARDS 2014
+      {/* 3 Awards Grid - Each stacking 2 images */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-start">
+          {AWARDS_LIST.map((award, index) => (
+            <div
+              key={award.id}
+              id={`award-card-${index + 1}`}
+              className="bg-neutral-900 text-white shadow-xl overflow-hidden flex flex-col border border-neutral-800 transition-all duration-300 hover:shadow-2xl"
+            >
+              {/* Stacked Image 1: Development Image */}
+              <div className="relative w-full aspect-[3/2] bg-neutral-950 overflow-hidden group">
+                <img
+                  src={award.projectImage}
+                  alt={`${award.development} - ${award.title}`}
+                  onError={(e) => {
+                    if (award.fallbackProjectImage) {
+                      (e.target as HTMLImageElement).src = award.fallbackProjectImage;
+                    }
+                  }}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3 bg-black/75 backdrop-blur-xs text-white text-[11px] uppercase tracking-widest px-2.5 py-1 font-normal">
+                  {award.development}
                 </div>
               </div>
 
-              <div className="py-4 space-y-3">
-                <p className="text-xs text-neutral-500 uppercase tracking-widest font-normal">
-                  This is to recognise
-                </p>
-                <h4 className="text-lg sm:text-xl font-semibold tracking-wider uppercase text-neutral-900 font-['Cinzel',serif]">
-                  ASPEN HOMES LTD
-                </h4>
-                <p className="text-xs sm:text-sm text-neutral-600 font-normal">
-                  for their outstanding achievement on their development
-                </p>
-                <div className="text-base sm:text-lg font-medium tracking-wide uppercase text-neutral-800">
-                  50 PEWLEY HILL
+              {/* Stacked Image 2: Award Plaque / Certificate Image */}
+              <div className="relative w-full aspect-[1/1] sm:aspect-[4/3] bg-neutral-950 overflow-hidden border-t border-neutral-800 group">
+                <img
+                  src={award.awardImage}
+                  alt={`${award.organization} - ${award.title}`}
+                  onError={(e) => {
+                    if (award.fallbackAwardImage) {
+                      (e.target as HTMLImageElement).src = award.fallbackAwardImage;
+                    }
+                  }}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Award Information & Details */}
+              <div className="p-6 text-center space-y-3 bg-gradient-to-b from-neutral-900 to-neutral-950 border-t border-neutral-800/80">
+                <div className="text-xs uppercase tracking-[0.25em] text-neutral-400 font-normal">
+                  {award.organization}
                 </div>
-                <p className="text-xs text-neutral-500 font-normal max-w-sm mx-auto">
-                  being listed as a Premier Guarantee Excellence Awards 2014 &ldquo;Top Development&rdquo;
+                <h3 className="text-lg sm:text-xl font-normal font-['Cormorant_Garamond',serif] uppercase tracking-wider text-white leading-snug">
+                  {award.title}
+                </h3>
+                <div className="h-[1px] w-12 bg-neutral-700 mx-auto" />
+                <p className="text-xs text-neutral-400 font-normal">
+                  {award.development}
                 </p>
               </div>
-
-              <div className="pt-6 border-t border-neutral-200 flex flex-col items-center">
-                <div className="font-['Cormorant_Garamond',serif] italic text-sm text-neutral-700">
-                  Gary Devaney
-                </div>
-                <div className="text-xs text-neutral-500 tracking-wider uppercase mt-0.5 font-normal">
-                  Group Chairman and CEO &bull; Premier Guarantee
-                </div>
-              </div>
             </div>
-
-            {/* Geometric watermark stamp */}
-            <div className="mt-6 flex justify-center opacity-80">
-              <div className="h-6 w-32 bg-gradient-to-r from-teal-600 via-blue-600 to-indigo-600 rounded-sm" />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

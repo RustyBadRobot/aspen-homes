@@ -38,9 +38,11 @@ export interface AwardItem {
   title: string;
   organization: string;
   development: string;
-  description: string;
-  image?: string;
-  certificateText?: string;
+  description?: string;
+  projectImage: string;
+  awardImage: string;
+  fallbackProjectImage?: string;
+  fallbackAwardImage?: string;
 }
 
 export interface NewsPost {
