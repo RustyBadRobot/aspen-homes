@@ -7,6 +7,7 @@ import {
   NewsPost,
   TestimonialItem,
   VideoItem,
+  CommunityItem,
 } from '../types';
 
 export const SOCIAL_LINKS = {
@@ -1051,3 +1052,79 @@ export const VIDEOS_LIST: VideoItem[] = [
     videoUrl: '/images/2021/10/Interior-Finishes-Complete.mp4',
   },
 ];
+
+export const COMMUNITY_LIST: CommunityItem[] = [
+  {
+    id: 'cwsnf',
+    title: 'Children with Special Needs Foundation',
+    image: '/images/2017/09/cwsnf-logo.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=80',
+    content: [
+      'We are proud to be actively involved with the ‘Children with Special Needs Foundation’. The charity provides help to special children and their families, schools and clubs in Surrey, Berkshire and Hampshire.',
+      'The focal aim of the charity is to provide help to local children by avoiding the red tape of larger organisations and offering a quick and positive response to their needs. The CWSNF tries to “Put a smile on tomorrow, today” and has raised over £3 million to date, of which the TOTAL sum has been used to provide much needed help to these children and their families.',
+      'The Aspen Homes team are proud to have assisted the charity in fundraising by participating in events including The London Marathon, The Great North Run, classic golf days and even a hair-raising parachute jump from 15,000 feet.',
+    ],
+  },
+  {
+    id: 'guildford-philanthropy',
+    title: 'Guildford Philanthropy',
+    image: '/images/2019/05/guildford-philanthropy.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1000&q=80',
+    content: [
+      'We are delighted to be Corporate Ambassadors for Guildford Philanthropy since 2019. Supporting all the incredible work that Guildford Philanthropy do in the town and surrounding areas has been a privilege for us at Aspen Homes.',
+      'Guildford Philanthropy’s mission is to raise awareness and encourage local members of our Community to help support projects that deliver training opportunities, work experience, jobs and other benefits to local people who need help – whether due to poor education, disability or mental illness.',
+      'For more information on Guildford Philanthropy, their mission and what they do, please visit www.guildfordphilanthropy.org.uk',
+    ],
+    link: {
+      label: 'www.guildfordphilanthropy.org.uk',
+      url: 'https://www.guildfordphilanthropy.org.uk',
+    },
+  },
+  {
+    id: 'woking-hospice',
+    title: 'Woking Hospice',
+    image: '/images/2017/09/woking-hospice.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1000&q=80',
+    content: [
+      'We are pleased to support Woking Hospice with which we have a personal connection.',
+      'After the devastating loss of our colleague and family member John, the Aspen Homes team were determined to give something back to the Woking Hospice who took such great care of John in his final weeks.',
+      'The team took part in the Surrey Half Marathon, finishing in just over two hours but most importantly raising over £7,000 for the Woking Hospice to help them towards providing the same level of care for future patients.',
+    ],
+  },
+  {
+    id: 'oxshott-village-sign',
+    title: 'Oxshott Village Sign',
+    image: '/images/2018/05/oxshott-village-sign-cgi.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80',
+    content: [
+      'We are always eager to give something back to the communities in which we are operating, so we are delighted to be able to contribute towards the creation of a new village sign in Oxshott.',
+      'In early 2018 we were approached by the Oxshott Village Sign team asking if we would be able to use our expertise to create a computer generated image that could be used to illustrate to local residents what a sign might look like. With a competition running in which the winning design will become the new village sign, it was hoped that the CGI would encourage more local residents to get involved in the design process. Working alongside the designers at Antler Group, the CGI opposite was created for the use of the Oxshott Village Sign campaign.',
+      'To date there have been nearly 100 designs submitted. We look forward to seeing the finished article which will be a fitting landmark for the village!',
+    ],
+    quote: {
+      text: '“We’re greatly indebted to Aspen Homes for sponsoring the creation of a computer-generated image of what an Oxshott Village Sign might look like in one of the locations where it might be situated. Aspen Homes are currently developing two luxury 5-bedroom homes on the Danes Hills Farmhouse site on the Leatherhead Road in Oxshott. Thanks very much to Joe Jelley, Aspen’s Managing Director and to their Development & Marketing Manager, Sean Moore.”',
+      author: 'Testimonial from the Oxshott Village Sign team',
+    },
+  },
+  {
+    id: 'three-peaks-challenge',
+    title: 'Three Peaks Challenge',
+    image: '/images/2022/04/three-peaks-challenge.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80',
+    content: [
+      'On the 22nd April 2022 our Managing Director Joe took on the Three Peaks Challenge alongside the team at Levanter Developments.',
+      'Despite some testing conditions the team managed to climb Ben Nevis, Scafell Pike and Mount Snowdon all within the allocated 24 hours, completing the challenge successfully. Even more impressive was the £31,760 that the team raised for for the Louis Thorold Foundation and the Sheldon Cancer Unit at the Good Hope Hospital, an incredible achievement. A huge congratulations to everyone involved.',
+    ],
+  },
+  {
+    id: 'mercy-hospital',
+    title: 'Mercy Hospital Childrens Cancer Ward, Ireland',
+    image: '/images/2019/10/mercy-hospital-presentation.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80',
+    content: [
+      'It was with great pleasure that our Managing Director Joe Jelley was able to visit the Childrens Cancer Ward at the Mercy Hospital in Cork, Ireland to present their foundation with a cheque for €3150.',
+      'The money was raised by Joe taking part in the Royal Parks Half Marathon and the Maverick Dark Run back in 2019, two big challenges that were well worth the pain for such a great cause. The staff at the Mercy took fantastic care of Joe’s nephew when he was diagnosed with Leukemia, and this donation was just a small reflection of how grateful Joe and the family are to everyone at the Mercy Hospital.',
+    ],
+  },
+];
+

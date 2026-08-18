@@ -74,3 +74,21 @@ export interface VideoItem {
   aspectRatio?: '16:9' | '4:3';
   isLarge?: boolean;
 }
+
+export interface CommunityItem {
+  id: string;
+  title: string;
+  subtitle?: string;
+  image: string;
+  fallbackImage: string;
+  content: string[];
+  quote?: {
+    text: string;
+    author: string;
+  };
+  link?: {
+    label: string;
+    url: string;
+  };
+}
+
