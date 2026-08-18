@@ -44,7 +44,7 @@ export function HomePage({ navigate }: HomePageProps) {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Slider Section with Splide.js */}
-      <section className="relative w-full aspect-[3/2] max-h-[85vh] min-h-[360px] bg-black overflow-hidden pt-20 sm:pt-24">
+      <section className="relative w-full aspect-[3/2] max-h-[85vh] min-h-[360px] bg-black overflow-hidden">
         <div ref={splideRef} className="splide h-full w-full">
           <div className="splide__track h-full">
             <ul className="splide__list h-full">

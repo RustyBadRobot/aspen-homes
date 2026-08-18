@@ -57,15 +57,15 @@ export function Header({ currentPath, navigate }: HeaderProps) {
             : 'bg-black/90'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 flex items-center justify-between">
-          {/* Left Social Icons */}
-          <div className="flex items-center space-x-2 sm:space-x-3 w-1/4">
+        <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 flex items-center justify-between">
+          {/* Left Social Icons - Minimal footprint on mobile */}
+          <div className="flex items-center space-x-1 sm:space-x-2.5 md:space-x-3 shrink-0">
             <a
               href={SOCIAL_LINKS.facebook}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Aspen Homes on Facebook"
-              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/40 flex items-center justify-center text-white/80 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300 text-xs sm:text-sm font-semibold"
+              className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border border-white/40 flex items-center justify-center text-white/80 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300 text-[10px] sm:text-xs md:text-sm font-semibold"
             >
               f
             </a>
@@ -74,9 +74,9 @@ export function Header({ currentPath, navigate }: HeaderProps) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Aspen Homes on X"
-              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/40 flex items-center justify-center text-white/80 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300 text-xs sm:text-sm"
+              className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border border-white/40 flex items-center justify-center text-white/80 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300"
             >
-              <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+              <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 fill-current" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </a>
@@ -85,25 +85,25 @@ export function Header({ currentPath, navigate }: HeaderProps) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Aspen Homes on LinkedIn"
-              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/40 flex items-center justify-center text-white/80 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300 text-[10px] sm:text-xs font-semibold"
+              className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border border-white/40 flex items-center justify-center text-white/80 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300 text-[8px] sm:text-[10px] md:text-xs font-semibold"
             >
               in
             </a>
           </div>
 
           {/* Center Logo */}
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 flex justify-center px-1 sm:px-2 min-w-0">
             <AspenLogo onClick={() => handleNavClick('/')} />
           </div>
 
           {/* Right Action Icons (Menu Toggle) */}
-          <div className="flex items-center justify-end space-x-3 sm:space-x-5 w-1/4">
+          <div className="flex items-center justify-end shrink-0">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={isMenuOpen}
               id="header-menu-toggle-btn"
-              className="text-white/90 hover:text-white p-2 focus:outline-none cursor-pointer flex flex-col justify-center items-center w-8 h-8 space-y-1.5 group"
+              className="text-white/90 hover:text-white p-1 sm:p-2 focus:outline-none cursor-pointer flex flex-col justify-center items-center w-7 h-7 sm:w-8 sm:h-8 space-y-1 sm:space-y-1.5 group"
             >
               <span
                 className={`block h-[1.5px] w-6 bg-white transition-transform duration-300 ease-in-out ${

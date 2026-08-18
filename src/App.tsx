@@ -9,6 +9,7 @@ import { ProjectDetailPage } from './pages/ProjectDetailPage';
 import { AwardsPage } from './pages/AwardsPage';
 import { LandRequiredPage } from './pages/LandRequiredPage';
 import { NewsPage } from './pages/NewsPage';
+import { NewsDetailPage } from './pages/NewsDetailPage';
 import { TestimonialsPage } from './pages/TestimonialsPage';
 import { VideosPage } from './pages/VideosPage';
 import { ContactUsPage } from './pages/ContactUsPage';
@@ -17,6 +18,7 @@ import { CustomerServicePage } from './pages/CustomerServicePage';
 import { LocalCommunityPage } from './pages/LocalCommunityPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { FEATURED_PROJECTS, CURRENT_DEVELOPMENTS, PORTFOLIO_PROJECTS } from './data/mockData';
+import { NEWS_POSTS, getNewsBySlug } from './data/newsData';
 
 export default function App() {
   const ALL_PROJECTS = [...CURRENT_DEVELOPMENTS, ...PORTFOLIO_PROJECTS, ...FEATURED_PROJECTS];
@@ -64,6 +66,20 @@ export default function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  // Check if current route is a news article (e.g. /news/:slug/ or /horseshoe-lane-west-updates/:slug/)
+  let newsSlugFromPath = '';
+  if (currentPath.startsWith('/news/') && currentPath !== '/news/') {
+    newsSlugFromPath = currentPath.replace(/^\/news\//, '').replace(/\/$/, '');
+  } else if (currentPath.startsWith('/horseshoe-lane-west-updates/') && currentPath !== '/horseshoe-lane-west-updates/') {
+    newsSlugFromPath = currentPath.replace(/^\/horseshoe-lane-west-updates\//, '').replace(/\/$/, '');
+  }
+
+  const matchedNews = newsSlugFromPath ? getNewsBySlug(newsSlugFromPath) : NEWS_POSTS.find(
+    (n) =>
+      currentPath === `/news/${n.slug}/` ||
+      normalizePath(`/news/${n.slug}`) === currentPath
+  );
+
   // Check if current route is a project slug (supports /portfolio/:slug/ and /:slug/)
   const matchedProject = ALL_PROJECTS.find(
     (p) =>
@@ -75,6 +91,10 @@ export default function App() {
 
   // Render the appropriate page based on currentPath
   const renderPage = () => {
+    if (matchedNews || newsSlugFromPath) {
+      return <NewsDetailPage slug={newsSlugFromPath || (matchedNews ? matchedNews.slug : '')} navigate={navigate} />;
+    }
+
     if (matchedProject) {
       return <ProjectDetailPage slug={matchedProject.slug} navigate={navigate} />;
     }

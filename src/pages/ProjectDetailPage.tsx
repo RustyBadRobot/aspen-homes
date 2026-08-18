@@ -55,7 +55,7 @@ export function ProjectDetailPage({ slug, navigate }: ProjectDetailPageProps) {
   };
 
   return (
-    <div className="bg-white min-h-screen pt-20 sm:pt-24 flex flex-col justify-between">
+    <div className="bg-white min-h-screen flex flex-col justify-between">
       <div>
         {/* Header Hero Area matching merrow-croft-guildford.png */}
         <div className="relative w-full h-[40vh] sm:h-[50vh] bg-[#9ca3af] flex items-center justify-center text-center px-4">

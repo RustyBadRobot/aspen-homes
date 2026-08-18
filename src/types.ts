@@ -54,6 +54,8 @@ export interface NewsPost {
   summary: string;
   content: string[];
   image: string;
+  category?: string;
+  author?: string;
 }
 
 export interface TestimonialItem {

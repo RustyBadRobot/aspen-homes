@@ -10,7 +10,7 @@ export function ContactUsPage() {
   };
 
   return (
-    <div className="bg-white min-h-screen pt-20 sm:pt-24">
+    <div className="bg-white min-h-screen">
       {/* Hero Header matching contact-us.png */}
       <div className="relative w-full h-[45vh] sm:h-[55vh] md:h-[65vh] bg-black overflow-hidden flex items-center justify-center">
         <img

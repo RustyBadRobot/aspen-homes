@@ -38,7 +38,7 @@ export function PortfolioPage({
   };
 
   return (
-    <div className="bg-white min-h-screen pt-20 sm:pt-24">
+    <div className="bg-white min-h-screen">
       {/* Hero Header matching portfolio.png */}
       <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
