@@ -57,19 +57,19 @@ export function ProjectDetailPage({ slug, navigate }: ProjectDetailPageProps) {
           ))}
 
           {/* Photo Gallery for Project */}
-          <div className="pt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="h-64 sm:h-72 overflow-hidden shadow-sm">
+          <div className="pt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="w-full aspect-[3/2] overflow-hidden shadow-sm bg-neutral-100">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover aspect-[3/2] hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="h-64 sm:h-72 overflow-hidden shadow-sm">
+            <div className="w-full aspect-[3/2] overflow-hidden shadow-sm bg-neutral-100">
               <img
                 src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
                 alt="Interior specification"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover aspect-[3/2] hover:scale-105 transition-transform duration-700"
               />
             </div>
           </div>

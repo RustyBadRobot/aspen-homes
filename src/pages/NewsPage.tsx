@@ -20,11 +20,11 @@ export function NewsPage({ navigate }: NewsPageProps) {
   return (
     <div className="bg-white min-h-screen pt-20 sm:pt-24">
       {/* Hero Header matching news.png */}
-      <div className="relative w-full h-[45vh] sm:h-[55vh] md:h-[65vh] bg-black overflow-hidden flex items-center justify-center">
+      <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
           src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=2000&q=85"
           alt="Horseshoe Lane West Site"
-          className="w-full h-full object-cover brightness-75"
+          className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
         <div className="absolute inset-0 bg-black/40" />
 
@@ -56,12 +56,12 @@ export function NewsPage({ navigate }: NewsPageProps) {
               className="bg-white flex flex-col justify-between group cursor-pointer"
             >
               <div>
-                <div className="h-56 sm:h-64 w-full overflow-hidden bg-neutral-100 relative mb-4">
+                <div className="w-full aspect-[3/2] overflow-hidden bg-neutral-100 relative mb-4">
                   <img
                     src={post.image}
                     alt={post.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover aspect-[3/2] transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 

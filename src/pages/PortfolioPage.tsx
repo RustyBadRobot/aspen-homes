@@ -16,11 +16,11 @@ export function PortfolioPage({ navigate, title = 'Current Developments' }: Port
   return (
     <div className="bg-white min-h-screen pt-20 sm:pt-24">
       {/* Hero Header matching portfolio.png */}
-      <div className="relative w-full h-[45vh] sm:h-[55vh] md:h-[65vh] bg-black overflow-hidden flex items-center justify-center">
+      <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
           src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85"
           alt="Surrey Landscape Developments"
-          className="w-full h-full object-cover brightness-75"
+          className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
         <div className="absolute inset-0 bg-black/35" />
 
@@ -49,13 +49,13 @@ export function PortfolioPage({ navigate, title = 'Current Developments' }: Port
               key={proj.id}
               onClick={() => navigate(`/${proj.slug}/`)}
               id={`portfolio-item-${proj.id}`}
-              className="group relative h-[380px] sm:h-[460px] md:h-[540px] overflow-hidden cursor-pointer bg-neutral-900"
+              className="group relative w-full aspect-[3/2] overflow-hidden cursor-pointer bg-neutral-900"
             >
               <img
                 src={proj.image}
                 alt={proj.title}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                className="w-full h-full object-cover aspect-[3/2] transition-transform duration-700 ease-out group-hover:scale-105"
               />
 
               {/* Persistent / Hover Info Panel matching screenshot */}

@@ -9,6 +9,12 @@ import {
   VideoItem,
 } from '../types';
 
+export const SOCIAL_LINKS = {
+  facebook: 'https://www.facebook.com/AspenHomesUK',
+  twitter: 'https://x.com/AspenHomesUK',
+  linkedin: 'https://www.linkedin.com/company/4830123?trk=prof-0-ovw-curr_pos',
+};
+
 export const NAVIGATION_ITEMS: NavItem[] = [
   { name: 'Home', path: '/' },
   { name: 'Horseshoe Lane West Updates', path: '/news/' },

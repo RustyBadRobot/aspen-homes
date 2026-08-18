@@ -44,35 +44,20 @@ export function HomePage({ navigate }: HomePageProps) {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Slider Section with Splide.js */}
-      <section className="relative w-full h-[65vh] sm:h-[80vh] md:h-[88vh] bg-black overflow-hidden pt-20 sm:pt-24">
+      <section className="relative w-full aspect-[3/2] max-h-[85vh] min-h-[360px] bg-black overflow-hidden pt-20 sm:pt-24">
         <div ref={splideRef} className="splide h-full w-full">
           <div className="splide__track h-full">
             <ul className="splide__list h-full">
               {HOME_SLIDER_ITEMS.map((slide, idx) => (
                 <li key={slide.id} className="splide__slide h-full relative">
-                  <div className="w-full h-full relative">
+                  <div className="w-full h-full aspect-[3/2] relative">
                     <img
                       data-splide-lazy={slide.image}
                       src={idx === 0 ? slide.image : undefined}
                       alt={slide.alt}
                       loading={idx === 0 ? 'eager' : 'lazy'}
-                      className="w-full h-full object-cover brightness-[0.9] transition-transform duration-1000 ease-out"
+                      className="w-full h-full object-cover aspect-[3/2] transition-transform duration-1000 ease-out"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/30 pointer-events-none" />
-
-                    {/* Slide Caption / Subtitle overlay */}
-                    {slide.title && (
-                      <div className="absolute bottom-16 sm:bottom-20 left-0 right-0 text-center px-4 pointer-events-none">
-                        <h2 className="text-white text-2xl sm:text-4xl md:text-5xl font-light font-['Cormorant_Garamond',serif] uppercase tracking-[0.2em] drop-shadow-md">
-                          {slide.title}
-                        </h2>
-                        {slide.subtitle && (
-                          <p className="text-neutral-200 text-xs sm:text-sm md:text-base font-light tracking-[0.15em] uppercase mt-2 max-w-2xl mx-auto drop-shadow">
-                            {slide.subtitle}
-                          </p>
-                        )}
-                      </div>
-                    )}
                   </div>
                 </li>
               ))}
@@ -115,13 +100,13 @@ export function HomePage({ navigate }: HomePageProps) {
                 key={proj.id}
                 onClick={() => navigate(`/${proj.slug}/`)}
                 id={`featured-card-${proj.id}`}
-                className="group relative h-64 sm:h-72 md:h-80 overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-500 bg-neutral-900"
+                className="group relative w-full aspect-[3/2] overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-500 bg-neutral-900"
               >
                 <img
                   src={proj.image}
                   alt={proj.title}
                   loading="lazy"
-                  className="w-full h-full object-cover brightness-[0.95] group-hover:scale-110 group-hover:brightness-75 transition-all duration-700 ease-out"
+                  className="w-full h-full object-cover aspect-[3/2] brightness-[0.95] group-hover:scale-110 group-hover:brightness-75 transition-all duration-700 ease-out"
                 />
 
                 {/* Hover Overlay with text appearing on hover */}

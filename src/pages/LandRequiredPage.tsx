@@ -18,11 +18,11 @@ export function LandRequiredPage({ navigate }: LandRequiredPageProps) {
   return (
     <div className="bg-white min-h-screen pt-20 sm:pt-24">
       {/* Hero Header matching land-required.png */}
-      <div className="relative w-full h-[45vh] sm:h-[55vh] md:h-[65vh] bg-black overflow-hidden flex items-center justify-center">
+      <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
           src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=2000&q=85"
           alt="Aspen Homes Development Land"
-          className="w-full h-full object-cover brightness-75"
+          className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
         <div className="absolute inset-0 bg-black/40" />
 

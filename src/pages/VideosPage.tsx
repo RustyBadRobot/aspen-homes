@@ -19,11 +19,11 @@ export function VideosPage() {
   return (
     <div className="bg-white min-h-screen pt-20 sm:pt-24">
       {/* Hero Header matching videos.png */}
-      <div className="relative w-full h-[45vh] sm:h-[55vh] md:h-[65vh] bg-black overflow-hidden flex items-center justify-center">
+      <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
           alt="Aspen Homes Architecture"
-          className="w-full h-full object-cover brightness-75"
+          className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
         <div className="absolute inset-0 bg-black/40" />
 
@@ -56,12 +56,12 @@ export function VideosPage() {
         <div
           onClick={() => setActiveVideo(mainVideo)}
           id="featured-main-video"
-          className="relative h-[320px] sm:h-[450px] md:h-[550px] overflow-hidden group cursor-pointer bg-black shadow-xl mb-12"
+          className="relative w-full aspect-[3/2] max-h-[580px] mx-auto overflow-hidden group cursor-pointer bg-black shadow-xl mb-12"
         >
           <img
             src={mainVideo.thumbnail}
             alt={mainVideo.title}
-            className="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-transform duration-700"
+            className="w-full h-full object-cover aspect-[3/2] brightness-90 group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-300" />
 
@@ -93,12 +93,12 @@ export function VideosPage() {
               id={`video-card-${video.id}`}
               className="group cursor-pointer flex flex-col justify-between"
             >
-              <div className="relative h-56 sm:h-64 overflow-hidden bg-neutral-900 shadow-md mb-3">
+              <div className="relative w-full aspect-[3/2] overflow-hidden bg-neutral-900 shadow-md mb-3">
                 <img
                   src={video.thumbnail}
                   alt={video.title}
                   loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover aspect-[3/2] group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/25 group-hover:bg-black/50 transition-colors" />
 

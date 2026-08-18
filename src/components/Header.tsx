@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { AspenLogo } from './AspenLogo';
-import { NAVIGATION_ITEMS } from '../data/mockData';
+import { NAVIGATION_ITEMS, SOCIAL_LINKS } from '../data/mockData';
 
 interface HeaderProps {
   currentPath: string;
   navigate: (path: string) => void;
-  onOpenSearch: () => void;
 }
 
-export function Header({ currentPath, navigate, onOpenSearch }: HeaderProps) {
+export function Header({ currentPath, navigate }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -51,7 +50,7 @@ export function Header({ currentPath, navigate, onOpenSearch }: HeaderProps) {
           {/* Left Social Icons */}
           <div className="flex items-center space-x-2 sm:space-x-3 w-1/4">
             <a
-              href="https://facebook.com"
+              href={SOCIAL_LINKS.facebook}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Aspen Homes on Facebook"
@@ -60,10 +59,10 @@ export function Header({ currentPath, navigate, onOpenSearch }: HeaderProps) {
               f
             </a>
             <a
-              href="https://twitter.com"
+              href={SOCIAL_LINKS.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Aspen Homes on Twitter"
+              aria-label="Aspen Homes on X"
               className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/40 flex items-center justify-center text-white/80 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300 text-xs sm:text-sm"
             >
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -71,7 +70,7 @@ export function Header({ currentPath, navigate, onOpenSearch }: HeaderProps) {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Aspen Homes on LinkedIn"
@@ -86,29 +85,8 @@ export function Header({ currentPath, navigate, onOpenSearch }: HeaderProps) {
             <AspenLogo onClick={() => handleNavClick('/')} />
           </div>
 
-          {/* Right Action Icons (Search & Menu Toggle) */}
+          {/* Right Action Icons (Menu Toggle) */}
           <div className="flex items-center justify-end space-x-3 sm:space-x-5 w-1/4">
-            <button
-              onClick={onOpenSearch}
-              aria-label="Search website"
-              id="header-search-toggle"
-              className="text-white/80 hover:text-white p-1.5 rounded transition-colors focus:outline-none cursor-pointer"
-            >
-              <svg
-                className="w-5 h-5 sm:w-6 sm:h-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.75"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                />
-              </svg>
-            </button>
-
             {/* Menu Toggle Hamburger */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}

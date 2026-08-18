@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback } from 'react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { CookieBanner } from './components/CookieBanner';
-import { SearchModal } from './components/SearchModal';
 import { HomePage } from './pages/HomePage';
 import { AboutUsPage } from './pages/AboutUsPage';
 import { PortfolioPage } from './pages/PortfolioPage';
@@ -39,8 +38,6 @@ export default function App() {
     const p = window.location.pathname;
     return normalizePath(p || '/');
   });
-
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const navigate = useCallback((targetPath: string) => {
     const normalized = normalizePath(targetPath);
@@ -134,7 +131,6 @@ export default function App() {
       <Header
         currentPath={currentPath}
         navigate={navigate}
-        onOpenSearch={() => setIsSearchOpen(true)}
       />
 
       {/* Main Page Area with subtle fade transition */}
@@ -147,13 +143,6 @@ export default function App() {
 
       {/* Cookie Banner */}
       <CookieBanner onOpenPrivacy={() => navigate('/privacy-policy/')} />
-
-      {/* Global Search Modal */}
-      <SearchModal
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-        navigate={navigate}
-      />
     </div>
   );
 }

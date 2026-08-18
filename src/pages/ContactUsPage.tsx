@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SOCIAL_LINKS } from '../data/mockData';
 
 export function ContactUsPage() {
   const [name, setName] = useState('');
@@ -95,7 +96,7 @@ export function ContactUsPage() {
               </div>
               <div className="flex items-center space-x-3">
                 <a
-                  href="https://facebook.com"
+                  href={SOCIAL_LINKS.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Aspen Homes Facebook"
@@ -104,10 +105,10 @@ export function ContactUsPage() {
                   f
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href={SOCIAL_LINKS.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Aspen Homes Twitter"
+                  aria-label="Aspen Homes on X"
                   className="w-8 h-8 rounded-full border border-neutral-400 flex items-center justify-center text-neutral-700 hover:text-black hover:border-black transition-all text-xs"
                 >
                   <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -115,7 +116,7 @@ export function ContactUsPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href={SOCIAL_LINKS.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Aspen Homes LinkedIn"

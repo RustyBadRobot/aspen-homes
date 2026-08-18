@@ -9,11 +9,11 @@ export function AwardsPage() {
   return (
     <div className="bg-white min-h-screen pt-20 sm:pt-24">
       {/* Hero Header matching awards.png */}
-      <div className="relative w-full h-[45vh] sm:h-[55vh] md:h-[65vh] bg-black overflow-hidden flex items-center justify-center">
+      <div className="relative w-full aspect-[3/2] max-h-[60vh] min-h-[300px] bg-black overflow-hidden flex items-center justify-center">
         <img
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
           alt="Luxury Surrey Interior"
-          className="w-full h-full object-cover brightness-75"
+          className="w-full h-full object-cover aspect-[3/2] brightness-75"
         />
         <div className="absolute inset-0 bg-black/40" />
 
@@ -54,11 +54,11 @@ export function AwardsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Surrey Property Award Plaque */}
           <div className="bg-black text-white shadow-xl overflow-hidden flex flex-col border border-neutral-800">
-            <div className="h-64 sm:h-72 w-full overflow-hidden">
+            <div className="w-full aspect-[3/2] overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
                 alt="50 Pewley Hill Guildford"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover aspect-[3/2]"
               />
             </div>
             <div className="p-8 text-center space-y-4 bg-gradient-to-b from-neutral-900 to-black">
