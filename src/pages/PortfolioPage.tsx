@@ -1,5 +1,6 @@
 import { PORTFOLIO_PROJECTS, CURRENT_DEVELOPMENTS } from '../data/mockData';
 import { FeaturedProject } from '../types';
+import { InternalLink } from '../components/InternalLink';
 
 interface PortfolioPageProps {
   navigate: (path: string) => void;
@@ -69,9 +70,10 @@ export function PortfolioPage({
       <div id="portfolio-grid-section" className="w-full">
         <div className={`grid grid-cols-1 ${displayItems.length > 1 ? 'md:grid-cols-2' : 'max-w-4xl mx-auto'}`}>
           {displayItems.slice().reverse().map((proj) => (
-            <div
+            <InternalLink
               key={proj.id}
-              onClick={() => navigate(`/portfolio/${proj.slug}/`)}
+              href={`/portfolio/${proj.slug}/`}
+              navigate={navigate}
               id={`portfolio-item-${proj.id}`}
               className="group relative w-full aspect-[3/2] overflow-hidden cursor-pointer bg-neutral-900"
             >
@@ -100,7 +102,7 @@ export function PortfolioPage({
                   </div>
                 </div>
               </div>
-            </div>
+            </InternalLink>
           ))}
         </div>
       </div>

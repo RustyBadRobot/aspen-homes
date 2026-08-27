@@ -17,27 +17,27 @@ import { SustainabilityPage } from './pages/SustainabilityPage';
 import { CustomerServicePage } from './pages/CustomerServicePage';
 import { LocalCommunityPage } from './pages/LocalCommunityPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 import { FEATURED_PROJECTS, CURRENT_DEVELOPMENTS, PORTFOLIO_PROJECTS } from './data/mockData';
 import { NEWS_POSTS, getNewsBySlug } from './data/newsData';
+import { getSeoForPath, normalizePath } from './seo';
 
-export default function App() {
+interface AppProps {
+  initialPath?: string;
+}
+
+export default function App({ initialPath }: AppProps) {
   const ALL_PROJECTS = [...CURRENT_DEVELOPMENTS, ...PORTFOLIO_PROJECTS, ...FEATURED_PROJECTS];
-  // Ensure path ends with trailing slash (except empty string which normalizes to '/')
-  const normalizePath = (p: string): string => {
-    let path = p;
-    if (path.startsWith('#')) {
-      path = path.substring(1);
-    }
-    if (!path.startsWith('/')) {
-      path = '/' + path;
-    }
-    if (!path.endsWith('/')) {
-      path = path + '/';
-    }
-    return path;
-  };
 
   const [currentPath, setCurrentPath] = useState<string>(() => {
+    if (initialPath) {
+      return normalizePath(initialPath);
+    }
+
+    if (typeof window === 'undefined') {
+      return '/';
+    }
+
     // Check if redirected from a static 404 fallback
     try {
       const urlParams = new URLSearchParams(window.location.search);
@@ -84,6 +84,36 @@ export default function App() {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
+  useEffect(() => {
+    const seo = getSeoForPath(currentPath);
+    document.title = seo.title;
+
+    const upsertMeta = (selector: string, attributes: Record<string, string>) => {
+      let element = document.head.querySelector<HTMLMetaElement>(selector);
+      if (!element) {
+        element = document.createElement('meta');
+        document.head.appendChild(element);
+      }
+      Object.entries(attributes).forEach(([name, value]) => element?.setAttribute(name, value));
+    };
+
+    upsertMeta('meta[name="description"]', { name: 'description', content: seo.description });
+    upsertMeta('meta[name="robots"]', { name: 'robots', content: seo.robots });
+    upsertMeta('meta[property="og:title"]', { property: 'og:title', content: seo.title });
+    upsertMeta('meta[property="og:description"]', { property: 'og:description', content: seo.description });
+    upsertMeta('meta[property="og:url"]', { property: 'og:url', content: seo.canonical });
+    upsertMeta('meta[property="og:image"]', { property: 'og:image', content: seo.image });
+    upsertMeta('meta[property="og:type"]', { property: 'og:type', content: seo.type });
+
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = seo.canonical;
+  }, [currentPath]);
 
   // Check if current route is a news article (e.g. /news/:slug/ or /horseshoe-lane-west-updates/:slug/)
   let newsSlugFromPath = '';
@@ -164,8 +194,7 @@ export default function App() {
         return <PrivacyPolicyPage />;
 
       default:
-        // Default fallback to Home if unmatched
-        return <HomePage navigate={navigate} />;
+        return <NotFoundPage navigate={navigate} />;
     }
   };
 

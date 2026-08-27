@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { AspenLogo } from './AspenLogo';
 import { NAVIGATION_ITEMS, SOCIAL_LINKS } from '../data/mockData';
+import { InternalLink } from './InternalLink';
 
 interface HeaderProps {
   currentPath: string;
@@ -143,9 +144,10 @@ export function Header({ currentPath, navigate }: HeaderProps) {
                 (item.path !== '/' && currentPath.startsWith(item.path.replace(/\/$/, '')));
 
               return (
-                <button
+                <InternalLink
                   key={item.name}
-                  onClick={() => handleNavClick(item.path)}
+                  href={item.path}
+                  navigate={handleNavClick}
                   id={`nav-item-${item.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                   className={`text-sm sm:text-base md:text-lg lg:text-xl font-normal tracking-[0.18em] sm:tracking-[0.22em] transition-all duration-300 uppercase py-1 px-3 sm:px-4 relative group cursor-pointer font-['Montserrat',sans-serif] ${
                     isActive
@@ -161,7 +163,7 @@ export function Header({ currentPath, navigate }: HeaderProps) {
                       isActive ? 'w-10 opacity-100' : 'w-0 opacity-0 group-hover:w-8 group-hover:opacity-80'
                     }`}
                   />
-                </button>
+                </InternalLink>
               );
             })}
           </div>

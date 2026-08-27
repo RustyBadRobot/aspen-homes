@@ -1,3 +1,5 @@
+import { InternalLink } from '../components/InternalLink';
+
 interface LandRequiredPageProps {
   navigate: (path: string) => void;
 }
@@ -60,13 +62,14 @@ export function LandRequiredPage({ navigate }: LandRequiredPageProps) {
 
         {/* Action Button */}
         <div className="pt-6">
-          <button
-            onClick={() => navigate('/contact-us/')}
+          <InternalLink
+            href="/contact-us/"
+            navigate={navigate}
             id="land-contact-btn"
             className="bg-[#b3b8bc] hover:bg-neutral-800 text-white text-xs uppercase tracking-[0.25em] px-8 py-3 rounded-full transition-all duration-300 shadow-sm cursor-pointer hover:shadow-md"
           >
             Contact Us
-          </button>
+          </InternalLink>
         </div>
       </div>
     </div>

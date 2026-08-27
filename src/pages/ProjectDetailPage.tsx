@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Splide from '@splidejs/splide';
 import { FEATURED_PROJECTS, CURRENT_DEVELOPMENTS, PORTFOLIO_PROJECTS } from '../data/mockData';
+import { InternalLink } from '../components/InternalLink';
 
 interface ProjectDetailPageProps {
   slug: string;
@@ -131,23 +132,25 @@ export function ProjectDetailPage({ slug, navigate }: ProjectDetailPageProps) {
       {/* Previous / Next Project Bar matching screenshot */}
       <div className="border-t border-neutral-200 bg-neutral-50 py-6 px-6 sm:px-12">
         <div className="max-w-4xl mx-auto flex items-center justify-between text-xs uppercase tracking-widest text-neutral-600 font-light">
-          <button
-            onClick={() => navigate(`/portfolio/${prevProject.slug}/`)}
+          <InternalLink
+            href={`/portfolio/${prevProject.slug}/`}
+            navigate={navigate}
             id="prev-project-btn"
             className="flex items-center space-x-2 hover:text-neutral-900 transition-colors cursor-pointer group"
           >
             <span className="group-hover:-translate-x-1 transition-transform">←</span>
             <span>Previous</span>
-          </button>
+          </InternalLink>
 
-          <button
-            onClick={() => navigate(`/portfolio/${nextProject.slug}/`)}
+          <InternalLink
+            href={`/portfolio/${nextProject.slug}/`}
+            navigate={navigate}
             id="next-project-btn"
             className="flex items-center space-x-2 hover:text-neutral-900 transition-colors cursor-pointer group"
           >
             <span>Next</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </button>
+          </InternalLink>
         </div>
       </div>
     </div>

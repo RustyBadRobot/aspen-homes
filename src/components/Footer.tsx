@@ -1,3 +1,5 @@
+import { InternalLink } from './InternalLink';
+
 interface FooterProps {
   navigate: (path: string) => void;
 }
@@ -16,12 +18,13 @@ export function Footer({ navigate }: FooterProps) {
             info@aspen-homes.co.uk
           </a>{' '}
           &nbsp;|&nbsp;{' '}
-          <button
-            onClick={() => navigate('/privacy-policy/')}
+          <InternalLink
+            href="/privacy-policy/"
+            navigate={navigate}
             className="hover:text-white underline underline-offset-2 transition-colors cursor-pointer"
           >
             Privacy Policy
-          </button>
+          </InternalLink>
         </div>
       </div>
     </footer>

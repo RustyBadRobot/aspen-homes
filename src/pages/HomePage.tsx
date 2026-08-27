@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Splide from '@splidejs/splide';
 import { HOME_SLIDER_ITEMS, FEATURED_PROJECTS } from '../data/mockData';
+import { InternalLink } from '../components/InternalLink';
 
 interface HomePageProps {
   navigate: (path: string) => void;
@@ -109,9 +110,10 @@ export function HomePage({ navigate }: HomePageProps) {
           {/* 4 Wide Column Grid matching screenshot */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {FEATURED_PROJECTS.map((proj) => (
-              <div
+              <InternalLink
                 key={proj.id}
-                onClick={() => navigate(`/portfolio/${proj.slug}/`)}
+                href={`/portfolio/${proj.slug}/`}
+                navigate={navigate}
                 id={`featured-card-${proj.id}`}
                 className="group relative w-full aspect-[3/2] overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-500 bg-neutral-900"
               >
@@ -137,7 +139,7 @@ export function HomePage({ navigate }: HomePageProps) {
                     <span>→</span>
                   </div>
                 </div>
-              </div>
+              </InternalLink>
             ))}
           </div>
 

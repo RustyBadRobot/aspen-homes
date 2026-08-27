@@ -93,8 +93,14 @@ export function AspenLogo({
   imageSrc = '/images/2017/08/Aspen_Homes_Logo_white-grey.png',
 }: AspenLogoProps) {
   return (
-    <button
-      onClick={onClick}
+    <a
+      href="/"
+      onClick={(event) => {
+        if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
+          event.preventDefault();
+          onClick?.();
+        }
+      }}
       id="aspen-header-logo-btn"
       className={`flex flex-col items-center justify-center text-center cursor-pointer group focus:outline-none ${className}`}
       aria-label="Aspen Homes Home"
@@ -106,6 +112,6 @@ export function AspenLogo({
         style={{ aspectRatio: '364 / 72.5' }}
         referrerPolicy="no-referrer"
       />
-    </button>
+    </a>
   );
 }

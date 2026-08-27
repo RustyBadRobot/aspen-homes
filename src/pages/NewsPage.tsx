@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NEWS_POSTS } from '../data/newsData';
 import { ChevronLeft, ChevronRight, Facebook, Linkedin, Twitter } from 'lucide-react';
+import { InternalLink } from '../components/InternalLink';
 
 interface NewsPageProps {
   navigate: (path: string) => void;
@@ -82,11 +83,10 @@ export function NewsPage({ navigate }: NewsPageProps) {
           {currentPosts.map((post) => (
             <article
               key={post.id}
-              onClick={() => navigate(`/news/${post.slug}/`)}
               id={`news-card-${post.id}`}
-              className="bg-white flex flex-col justify-between group cursor-pointer"
+              className="bg-white flex flex-col justify-between group"
             >
-              <div>
+              <InternalLink href={`/news/${post.slug}/`} navigate={navigate} className="block">
                 {post.image && post.image.trim() !== '' && (
                   <div className="w-full aspect-[3/2] overflow-hidden bg-neutral-100 relative mb-4">
                     <img
@@ -113,13 +113,13 @@ export function NewsPage({ navigate }: NewsPageProps) {
                 <p className="text-sm sm:text-base font-normal text-neutral-700 leading-relaxed line-clamp-3">
                   {post.summary}
                 </p>
-              </div>
+              </InternalLink>
 
               <div className="pt-4 flex items-center justify-between border-t border-neutral-100 mt-4">
-                <span className="inline-flex items-center space-x-1.5 text-xs uppercase tracking-wider text-neutral-800 font-medium group-hover:text-black transition-colors">
+                <InternalLink href={`/news/${post.slug}/`} navigate={navigate} className="inline-flex items-center space-x-1.5 text-xs uppercase tracking-wider text-neutral-800 font-medium group-hover:text-black transition-colors">
                   <span>Read Article</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </span>
+                </InternalLink>
 
                 <div className="flex items-center space-x-1" onClick={(e) => e.stopPropagation()}>
                   <button
