@@ -44,7 +44,7 @@ export function HomePage({ navigate }: HomePageProps) {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Slider Section with Splide.js */}
-      <section className="relative w-full aspect-[3/2] max-h-[85vh] min-h-[360px] bg-black overflow-hidden">
+      <section className="relative h-[100svh] min-h-[480px] w-full overflow-hidden bg-black md:h-screen">
         <div ref={splideRef} className="splide h-full w-full">
           <div className="splide__track h-full">
             <ul className="splide__list h-full">
@@ -65,8 +65,8 @@ export function HomePage({ navigate }: HomePageProps) {
                     {/* Subtitle Caption Overlay if not empty */}
                     {slide.subtitle && slide.subtitle.trim() !== '' && (
                       <div className="absolute inset-x-0 bottom-12 sm:bottom-16 flex justify-center px-4 sm:px-8 z-10 pointer-events-none">
-                        <div className="bg-black/10 backdrop-blur-xs text-white max-w-4xl px-6 py-3 sm:px-10 sm:py-4 text-center rounded-xs pointer-events-auto border-0 shadow-none">
-                          <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light italic text-white leading-relaxed font-['Cormorant_Garamond',serif] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                        <div className="max-w-4xl px-6 py-3 text-center text-white sm:px-10 sm:py-4">
+                          <p className="home-page-quote text-[1.625rem] font-light italic leading-relaxed text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                             {slide.subtitle}
                           </p>
                         </div>
@@ -100,15 +100,15 @@ export function HomePage({ navigate }: HomePageProps) {
 
       {/* Featured Projects Grid Section */}
       <section id="featured-projects-section" className="py-12 sm:py-16 bg-white text-neutral-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
+        <div className="w-full">
+          <div className="px-4 text-center mb-8 sm:px-6 sm:mb-12 lg:px-8">
             <h2 className="text-base sm:text-lg font-medium tracking-[0.25em] uppercase text-neutral-900 font-['Montserrat',sans-serif]">
               Featured Projects
             </h2>
           </div>
 
           {/* 4 Wide Column Grid matching screenshot */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid w-full grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-4">
             {FEATURED_PROJECTS.map((proj) => (
               <InternalLink
                 key={proj.id}

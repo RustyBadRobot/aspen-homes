@@ -71,17 +71,6 @@ export function Header({ currentPath, navigate }: HeaderProps) {
               f
             </a>
             <a
-              href={SOCIAL_LINKS.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Aspen Homes on X"
-              className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border border-white/40 flex items-center justify-center text-white/80 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300"
-            >
-              <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 fill-current" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </a>
-            <a
               href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noopener noreferrer"

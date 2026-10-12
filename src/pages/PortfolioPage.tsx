@@ -69,7 +69,7 @@ export function PortfolioPage({
       {/* Grid of Developments with hover effect */}
       <div id="portfolio-grid-section" className="w-full">
         <div className={`grid grid-cols-1 ${displayItems.length > 1 ? 'md:grid-cols-2' : 'max-w-4xl mx-auto'}`}>
-          {displayItems.slice().reverse().map((proj) => (
+          {displayItems.map((proj) => (
             <InternalLink
               key={proj.id}
               href={`/portfolio/${proj.slug}/`}

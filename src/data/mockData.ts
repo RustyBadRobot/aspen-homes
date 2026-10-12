@@ -59,7 +59,7 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
     image: '/images/2017/08/Pewley-Heights-Front_crop.jpg',
     alt: 'Front exterior of Pewley Heights',
     title: 'Pewley Heights',
-    subtitle: ''
+    subtitle: '“The house has continued to surpass all our expectations, as has the Aspen Homes team, who are always on hand to address any issues we may have”'
   },
   {
     id: 'slide-5',
@@ -73,7 +73,7 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
     image: '/images/2017/08/pinehurst-night_new2a.jpg',
     alt: 'Pinehurst property illuminated at night',
     title: 'Pinehurst',
-    subtitle: ''
+    subtitle: '“Pinehurst is a home of extremely high quality and is a credit to the skill and professionalism of their builders”'
   },
   {
     id: 'slide-7',
@@ -87,7 +87,7 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
     image: '/images/2017/08/Pewley-Hill-Kitchen-new.jpg',
     alt: 'Modern kitchen in Pewley Hill',
     title: 'Pewley Hill Kitchen',
-    subtitle: ''
+    subtitle: '“It is quite obvious that Joe passionately cares about the quality of the homes he is developing”'
   },
   {
     id: 'slide-9',
@@ -101,7 +101,7 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
     image: '/images/2017/08/Butterfly-House-Kitchen.jpg',
     alt: 'Kitchen interior in Butterfly House',
     title: 'Butterfly House Kitchen',
-    subtitle: ''
+    subtitle: '“Your development in Aldersey Road is everything you promised… it is in keeping with the area, more than that it has enhanced the road visually, and looks classy”'
   },
   {
     id: 'slide-11',
@@ -115,7 +115,7 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
     image: '/images/2017/08/Pewley-Hill-Master.jpg',
     alt: 'Master bedroom in Pewley Hill',
     title: 'Pewley Hill',
-    subtitle: ''
+    subtitle: '“A very high standard end product which in my opinion is second to none…”'
   },
   {
     id: 'slide-13',
@@ -129,7 +129,7 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
     image: '/images/2017/08/Pewley-Heights-Bed-2-1.jpg',
     alt: 'Second bedroom in Pewley Heights',
     title: 'Pewley Heights Bedroom',
-    subtitle: ''
+    subtitle: '“After agreeing to purchase Pewley Heights off plan we were particularly pleased with the way Aspen Homes kept us regularly updated on how the house was progressing throughout the development process”'
   },
   {
     id: 'slide-15',
@@ -143,7 +143,7 @@ export const HOME_SLIDER_ITEMS: SlideItem[] = [
     image: '/images/2017/08/Butterfly-House-Bed-3.jpg',
     alt: 'Third bedroom in Butterfly House',
     title: 'Butterfly House Bedroom',
-    subtitle: ''
+    subtitle: '“From the moment we entered the property we were impressed by the quality of the house and the enthusiasm and passion of Joe Jelley.”'
   },
   {
     id: 'slide-17',
@@ -162,10 +162,11 @@ export const CURRENT_DEVELOPMENTS: FeaturedProject[] = [
     category: 'Current Developments',
     image: '/images/2026/04/P1-Front.jpeg',
     description: [
-      'Our development at Horseshoe Crescent is an exclusive collection of three thoughtfully designed and meticulously<br>finished bespoke family homes. Each home showcases our signature blend of contemporary elegance, traditional<br>craftsmanship, and practical living.',
-      'Set within a peaceful and well‑connected corner of Guildford, these brand‑new properties offer generous layouts, high‑quality specifications, and an attention to detail that elevates everyday living. All three homes offer versatility, privacy and an excellent balance of formal and informal space.',
-      'PRICES FROM: £1,750,000',
-      'For more details, you can view the dedicated Horseshoe Crescent website <a href="https://www.horseshoecrescent.com/">here</a>',
+      'Our development at Horseshoe Crescent is an exclusive collection of three thoughtfully designed and meticulously finished bespoke family homes. Each home showcases our signature blend of contemporary elegance, traditional craftsmanship, and practical living.',
+      'Set within a peaceful and well connected corner of Guildford, these brand new properties offer generous layouts, high quality specifications, and an attention to detail that elevates everyday living. All three homes offer versatility, privacy and an excellent balance of formal and informal space.',
+      '<strong>Oakhurst House is now sold</strong>',
+      '<strong>Clandon House and Hatchlands House - prices from £1.695 million</strong>',
+      'For more details on these homes, please view the dedicated Horseshoe Crescent website <a href="https://www.horseshoecrescent.com/">here</a>.',
     ],
     gallery: [
       '/images/2026/04/P1-Front.jpeg',
@@ -177,11 +178,23 @@ export const CURRENT_DEVELOPMENTS: FeaturedProject[] = [
       '/images/2026/04/P1-Bed.jpeg',
       '/images/2026/04/P1-Bath.jpeg',
     ],
-    status: 'Completed',
+    status: 'Current',
+  },
+  {
+    id: 'exciting-developments-coming-soon',
+    slug: 'exciting-developments-coming-soon',
+    title: 'Exciting Developments Coming Soon!',
+    category: 'Current Developments',
+    image: '/images/2021/10/Coming-Soon.jpg',
+    description: [
+      'We are working away on plans for our future developments and look forward to revealing news on them soon!'
+    ],
+    gallery: [],
+    status: 'Future',
   },
 ];
 
-export const PORTFOLIO_PROJECTS: FeaturedProject[] = [
+const PORTFOLIO_PROJECTS_UNSORTED: FeaturedProject[] = [
   {
     'id': 'rosemount-highmeadows',
     'slug': 'rosemount-highmeadows',
@@ -386,7 +399,7 @@ export const PORTFOLIO_PROJECTS: FeaturedProject[] = [
   {
     'id': 'chestnut-house-pines-camberley',
     'slug': 'chestnut-house-pines-camberley',
-    'title': 'Chestnut House &#038; The Pines, Camberley',
+    'title': 'Chestnut House & The Pines, Camberley',
     'category': [
       'completed-developments'
     ],
@@ -580,20 +593,9 @@ export const PORTFOLIO_PROJECTS: FeaturedProject[] = [
     ]
   },
   {
-    'id': 'exciting-developments-coming-soon',
-    'slug': 'exciting-developments-coming-soon',
-    'title': 'Exciting Developments Coming Soon!',
-    'category': [],
-    'image': '/images/2021/10/Coming-Soon.jpg',
-    'description': [
-      'We are working away on plans for our future developments and look forward to revealing news on them soon!'
-    ],
-    'gallery': []
-  },
-  {
     'id': 'may-and-juniper-cottages',
     'slug': 'may-and-juniper-cottages',
-    'title': 'May and Juniper Cottages',
+    'title': 'May and Juniper Cottages, Ash',
     'category': [
       'completed-developments'
     ],
@@ -677,33 +679,6 @@ export const PORTFOLIO_PROJECTS: FeaturedProject[] = [
     ]
   },
   {
-    'id': 'horseshoe-lane-west-guildford',
-    'slug': 'horseshoe-lane-west-guildford',
-    'title': 'Horseshoe Crescent, Guildford',
-    'category': [
-      'current-developments'
-    ],
-    'image': '/images/2026/04/P1-Front.jpeg',
-    'description': [
-      'Our development at Horseshoe Crescent is an exclusive collection of three thoughtfully designed and meticulously',
-      'finished bespoke family homes. Each home showcases our signature blend of contemporary elegance, traditional',
-      'craftsmanship, and practical living.',
-      'Set within a peaceful and well\u2011connected corner of Guildford, these brand\u2011new properties offer generous layouts, high\u2011quality specifications, and an attention to detail that elevates everyday living. All three homes offer versatility, privacy and an excellent balance of formal and informal space.',
-      'PRICES FROM: \u00a31,750,000',
-      'For more details, you can view the dedicated Horseshoe Crescent website here'
-    ],
-    'gallery': [
-      '/images/2026/04/P1-Front.jpeg',
-      '/images/2026/04/P1-Hallway.jpeg',
-      '/images/2026/04/P1-Open.jpeg',
-      '/images/2026/04/P1-Kitchen.jpeg',
-      '/images/2026/04/P1-Living.jpeg',
-      '/images/2026/04/P1-Study.jpeg',
-      '/images/2026/04/P1-Bed.jpeg',
-      '/images/2026/04/P1-Bath.jpeg'
-    ]
-  },
-  {
     'id': '6-willow-place-guildford',
     'slug': '6-willow-place-guildford',
     'title': 'Willow Place, Guildford',
@@ -738,6 +713,31 @@ export const PORTFOLIO_PROJECTS: FeaturedProject[] = [
     ]
   }
 ];
+
+const PORTFOLIO_PROJECT_ORDER = [
+  '6-willow-place-guildford',
+  'tretower-house-guildford',
+  'merrow-croft-guildford',
+  'foreman-manor-ash',
+  'may-and-juniper-cottages',
+  'pewley-heights-guildford',
+  'rosemount-highmeadows',
+  'butterfly-house-guildford',
+  'pewley-hill-guildford',
+  'fairwood-haslemere',
+  'chestnut-house-pines-camberley',
+  'pinehurst-haslemere',
+  'greensleeves-guildford',
+  'the-croft-ash',
+  'manor-way-guildford',
+  'lowlands-farnham',
+  'wellington-house-wentworth',
+  'the-barns-normandy',
+] as const;
+
+export const PORTFOLIO_PROJECTS: FeaturedProject[] = PORTFOLIO_PROJECT_ORDER.map(
+  (slug) => PORTFOLIO_PROJECTS_UNSORTED.find((project) => project.slug === slug),
+).filter((project): project is FeaturedProject => Boolean(project));
 
 export const FEATURED_PROJECTS: FeaturedProject[] = [
   {
