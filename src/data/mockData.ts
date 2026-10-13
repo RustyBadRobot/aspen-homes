@@ -11,8 +11,8 @@ import {
 } from '../types';
 
 export const SOCIAL_LINKS = {
+  instagram: 'https://www.instagram.com/aspenhomesltd/',
   facebook: 'https://www.facebook.com/AspenHomesUK',
-  twitter: 'https://x.com/AspenHomesUK',
   linkedin: 'https://www.linkedin.com/company/4830123?trk=prof-0-ovw-curr_pos',
 };
 

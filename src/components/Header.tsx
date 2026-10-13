@@ -62,6 +62,26 @@ export function Header({ currentPath, navigate }: HeaderProps) {
           {/* Left Social Icons - Minimal footprint on mobile */}
           <div className="flex items-center space-x-1 sm:space-x-2.5 md:space-x-3 shrink-0 z-10">
             <a
+              href={SOCIAL_LINKS.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Aspen Homes on Instagram"
+              className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border border-white/40 flex items-center justify-center text-white/80 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300"
+            >
+              <svg
+                aria-hidden="true"
+                className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                viewBox="0 0 24 24"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a
               href={SOCIAL_LINKS.facebook}
               target="_blank"
               rel="noopener noreferrer"
